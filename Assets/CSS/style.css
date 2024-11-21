@@ -1,0 +1,79 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Cabecera */
+header {
+    background-color: #FFD700; /* Amarillo brillante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px; /* Ajusta la altura según el logo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 180px; /* Tamaño del logo ajustado */
+    object-fit: contain; /* Mantener proporciones del logo */
+}
+
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+/* Barra de búsqueda */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px; /* Espacio entre la cabecera y la barra */
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 600px; /* Alargamos la barra */
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.barra-busqueda input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.barra-busqueda button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.barra-busqueda img {
+    width: 20px; /* Tamaño de la lupa */
+    height: 20px;
+}
