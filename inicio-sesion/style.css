@@ -71,7 +71,7 @@ header {
     align-items: stretch; /* Ambos elementos tendrán la misma altura */
     justify-content: center; /* Centrar horizontalmente */
     gap: 0; /* Sin espacio entre elementos */
-    margin-top: 20px; /* Espacio de 2 cm desde la cabecera */
+    margin-top: 30px; /* Espacio de 2 cm desde la cabecera */
 }
 
 /* Imagen decorativa */
@@ -86,9 +86,9 @@ header {
 
 /* Contenedor del formulario */
 .login-form-container {
-    background-color: #f0f0f0; /* Fondo más limpio y claro */
+    background-color: #c5bdbd; /* Fondo más limpio y claro */
     padding: 30px;
-    border: 1px solid #ddd;
+    border: 1px solid #c5bdbd;
     border-radius: 10px;
     width: 350px; /* Igual ancho que la imagen */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
