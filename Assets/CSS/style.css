@@ -50,21 +50,23 @@ main {
     margin-top: 80px; /* Espacio entre la cabecera y la barra */
 }
 
+/* Barra de búsqueda estilizada */
 .barra-busqueda {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Alinea los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Texto a la izquierda, lupa a la derecha */
     background-color: #fff; /* Fondo blanco */
     color: #333; /* Texto oscuro */
-    border: none; /* Quitar el Borde  */
+    border: 2px solid #333; /* Mantén el borde visible */
     border-radius: 25px; /* Bordes redondeados */
     padding: 10px 20px; /* Espaciado interno */
-    width: 600px; /* Ancho del botón */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 600px; /* Ancho de la barra */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
     font-size: 16px; /* Tamaño del texto */
     font-weight: bold; /* Texto en negrita */
-    cursor: pointer; /* Cambiar el puntero a "clicable" */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
     transition: all 0.3s ease; /* Animación suave */
+    position: relative; /* Necesario para posicionar elementos internos */
 }
 
 .barra-busqueda:hover {
@@ -72,8 +74,12 @@ main {
     transform: scale(1.02); /* Pequeño efecto de agrandamiento */
 }
 
+/* Ícono de la lupa */
 .barra-busqueda img {
-    width: 20px; /* Tamaño del ícono */
+    position: absolute; /* Posicionar relativo al contenedor */
+    right: 20px; /* Alinea la lupa al extremo derecho */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+    width: 20px; /* Tamaño de la lupa */
     height: 20px;
-   
 }
