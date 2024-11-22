@@ -1,17 +1,20 @@
 /* Cabecera amarilla misma en todas las páginas*/
-.header {
-    background-color: #FFD700;
-    padding: 15px;
+header {
+    background-color: #FFD700; /* Amarillo brillante */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    height: 70px; /* Ajusta la altura según el logo */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    height: 50px;
-    object-fit: contain;
+    height: 180px; /* Tamaño del logo ajustado */
+    object-fit: contain; /* Mantener proporciones del logo */
 }
+
+/*Menú hamburguesa (solo el icono)*/
 
 .menu-hamburguesa {
     display: flex;
@@ -26,6 +29,7 @@
     width: 25px;
     border-radius: 2px;
 }
+
 
 /* Contenedor principal */
 .main-container {
@@ -45,9 +49,9 @@
 
 /* Contenedor del formulario */
 .login-form-container {
-    background-color: #8b8787;
+    background-color: #ccc;
     padding: 30px;
-    border: 1px solid #8b8787;
+    border: 1px solid #ccc;
     border-radius: 10px;
     width: 350px;
     display: flex;
