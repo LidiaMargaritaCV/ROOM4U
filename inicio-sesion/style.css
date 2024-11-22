@@ -1,11 +1,78 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9; /* Fondo claro */
+    color: #333; /* Color principal de texto */
+}
+
+/* Cabecera */
+header {
+    background-color: #FFD700; /* Amarillo brillante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px; /* Ajustar la altura */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 50px; /* Tamaño ajustado del logo */
+    object-fit: contain;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+/* Menú desplegable */
+.menu-desplegable {
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-desplegable li {
+    padding: 10px;
+}
+
+.menu-desplegable a {
+    text-decoration: none;
+    color: #333;
+}
+
 /* Contenedor principal */
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
     gap: 40px; /* Espaciado entre la imagen y el formulario */
-    padding: 40px;
-    margin-top: 20px; /* Espaciado extra debajo de la cabecera */
+    padding: 20px;
 }
 
 /* Imagen decorativa */
@@ -13,36 +80,32 @@
     width: 350px;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra decorativa */
 }
 
 /* Contenedor del formulario */
 .login-form-container {
-    background-color: #f5f5f5;
+    background-color: #fff;
     padding: 30px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 400px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 /* Títulos */
-.form-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .form-header h2 {
-    font-size: 28px;
+    font-size: 28px; /* Tamaño del título */
     margin: 0 0 10px 0;
     color: #333;
+    text-align: center; /* Centrado */
 }
 
 .form-header p {
     font-size: 20px;
-    margin: 0;
+    margin: 0 0 20px 0;
     color: #666;
+    text-align: center;
 }
 
 /* Inputs */
@@ -70,7 +133,7 @@
 .toggle-password {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 20px;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -90,21 +153,27 @@
 }
 
 .login-button:hover {
-    background-color: #5c5ce6;
+    background-color: #5a5aff; /* Efecto al pasar el mouse */
 }
 
-/* Enlaces */
+/* Enlaces para olvide mi contraseña y ¿No tienes cuenta? Regístrate */
 .links {
     text-align: center;
     font-size: 14px;
+    color: #000;
 }
 
 .links a {
-    color: #6d6dff;
+    color: #000;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
-/* Este es un comentario de prueba */
-body {
-    background-color: red; /* Cambia el color de fondo */
+.links a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Ajuste del pie de página */
+.links p {
+    margin: 0;
 }
