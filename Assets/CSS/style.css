@@ -22,7 +22,8 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 180px;
+    object-fit: contain;
 }
 
 /* Menú hamburguesa */
