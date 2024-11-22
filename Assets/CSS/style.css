@@ -55,15 +55,15 @@ header {
     height: 50px;
     margin: 70px auto;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: relative;
 }
 .barra-busqueda img {
     position: absolute; /* Relativo a la barra */
     right: 20px; /* Fijar al extremo derecho */
     top: 50%; /* Centrar verticalmente dentro de la barra */
     transform: translateY(-50%); /* Ajustar para centrar exactamente */
-    width: 20px; /* Cambia aquí el tamaño de la lupa */
-    height: 20px; /* Cambia aquí el tamaño de la lupa */
+    width: 25px; /* Cambia aquí el tamaño de la lupa */
+    height: 25px; /* Cambia aquí el tamaño de la lupa */
     pointer-events: none; /* Para que no interfiera al hacer clic */
 }
 
