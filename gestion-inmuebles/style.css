@@ -50,8 +50,8 @@ h1 {
 }
 
 .photo {
-    background-color: #90EE90; /* Verde claro */
-    color: white;
+    background-color: #a2f8d0; /* Verde claro */
+    color: rgb(10, 6, 6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +63,7 @@ h1 {
 
 /* Botón de editar */
 .edit-button {
-    background-color: #a99cfc;
+    background-color: #a99bfd;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -102,31 +102,31 @@ button {
 }
 
 .assign-client {
-    background-color: #FFD700;
+    background-color: #f7d61cc0;
 }
 
 .status {
-    background-color: #32CD32;
-    color: white;
+    background-color: #19c919;
+    color: rgb(10, 10, 10);
 }
 
 .status.occupied {
-    background-color: #FF6347;
+    background-color: #ff5739;
 }
 
 .delete {
-    background-color: #6d6dff;
-    color: white;
+    background-color: #79a1f8;
+    color: rgb(5, 4, 4);
 }
 
 .save {
-    background-color: #a99cfc;
-    color: white;
+    background-color: #aba0f5;
+    color: #0a0a0a;
     font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
 }
 
 .save:hover {
-    background-color: #9387e5;
+    background-color: #96785d;
 }
