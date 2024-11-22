@@ -1,6 +1,6 @@
 // Validación del formulario
 document.getElementById("loginForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Evita que se recargue la página
+    
     
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
