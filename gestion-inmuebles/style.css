@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Cabecera */
+header {
+    background-color: #FFD700; /* Amarillo brillante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+/* Contenedor principal */
+.main-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Botón de editar */
+.edit-button {
+    background-color: #a99cfc; /* Color lila */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.edit-button:hover {
+    background-color: #9387e5; /* Lila más oscuro */
+}
+
+/* Detalles del inmueble */
+.details {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Fotos */
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.photo {
+    background-color: #32CD32; /* Verde brillante */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Botones de acción */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.assign-client {
+    background-color: #FFD700; /* Amarillo */
+}
+
+.status {
+    background-color: #32CD32; /* Verde brillante */
+    color: white;
+}
+
+.status.occupied {
+    background-color: #FF6347; /* Rojo para ocupado */
+}
+
+.delete {
+    background-color: #6d6dff; /* Azul brillante */
+    color: white;
+}
+
+.save {
+    background-color: #a99cfc; /* Botón Guardar datos */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.save:hover {
+    background-color: #9387e5; /* Lila más oscuro */
+}
