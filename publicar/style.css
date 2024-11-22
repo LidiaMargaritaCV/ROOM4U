@@ -1,18 +1,6 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-}
-
 /* Cabecera */
 header {
-    background-color: #FFD700;
+    background-color: #FFD700; /* Amarillo brillante */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +9,9 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 180px; /* Tamaño fijo del logo */
+    object-fit: contain;
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
 }
 
 .menu-hamburguesa {
@@ -43,15 +33,15 @@ header {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display: none;
+    display: none; /* Inicialmente oculto */
     position: absolute;
-    top: 70px;
     right: 20px;
+    top: 70px;
     z-index: 100;
 }
 
 .menu-desplegable li {
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .menu-desplegable a {
@@ -59,51 +49,69 @@ header {
     color: #333;
 }
 
+.menu-desplegable a:hover {
+    color: #FFD700; /* Color amarillo al pasar el mouse */
+}
+
 /* Contenedor principal */
 .main-container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-}
-
-.titulo-publicar {
-    text-align: right;
-    margin-bottom: 30px;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Formulario */
-.formulario {
     background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.campo {
-    margin-bottom: 20px;
+h1 {
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #444;
 }
 
-.label-boton {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #FFD700;
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
     font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-.boton {
+.campo-input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.boton-enviar {
     background-color: #6d6dff;
     color: white;
+    font-weight: bold;
     border: none;
     border-radius: 25px;
     padding: 10px 20px;
-    font-size: 16px;
     cursor: pointer;
 }
 
-.boton:hover {
+.boton-enviar:hover {
     background-color: #5a5aff;
+}
+
+/* Espaciado entre elementos */
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
 }
