@@ -24,7 +24,7 @@ header {
 .logo {
     height: 180px; /* Igual que en la página principal */
     object-fit: contain; /* Mantener proporciones */
-    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    
 }
 
 /*Menú hamburguesa (solo el icono)*/
