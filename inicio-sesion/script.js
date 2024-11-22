@@ -28,12 +28,7 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-// Enlace para "Olvidé mi contraseña"
-document.getElementById("forgot-password").addEventListener("click", function () {
-    alert("Función de recuperación de contraseña en desarrollo.");
-    // O redirige si ya tienes la página:
-    // window.location.href = "../recuperar/index.html";
-});
+
 
 // Enlace para "Regístrate"
 document.getElementById("register-link").addEventListener("click", function () {
