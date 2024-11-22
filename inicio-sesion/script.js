@@ -29,7 +29,8 @@ function validateEmail(email) {
 }
 
 // Enlace para "Regístrate"
-document.getElementById("register-link").addEventListener("click", function () {
+document.getElementById("register-link").addEventListener("click", function (e) {
+    e.preventDefault(); // Previene el comportamiento predeterminado del enlace
     window.location.href = "../registro/index.html"; // Redirige a la página de registro
 });
 
