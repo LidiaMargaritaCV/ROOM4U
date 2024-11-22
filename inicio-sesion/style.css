@@ -69,18 +69,17 @@ header {
 .main-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ocupa toda la altura de la ventana */
-    gap: 40px; /* Espaciado entre la imagen y el formulario */
+    align-items: stretch;
+    gap: 0; /* Espaciado entre la imagen y el formulario */
     padding: 20px;
     margin-top: -50px;
 }
 
 /* Imagen decorativa */
 .login-image img {
-    width: 350px;
-    height: auto;
-    border-radius: 10px;
+    width: auto;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra decorativa */
 }
 
@@ -89,9 +88,13 @@ header {
     background-color: #b8b3b3;
     padding: 30px;
     border: 1px solid #b8b3b3;
-    border-radius: 10px;
-    width: 400px;
+    border-radius: 0 10px 10px 0;
+    width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
 }
 
 /* Títulos */
@@ -159,7 +162,7 @@ header {
 
 /* Enlaces para olvide mi contraseña y ¿No tienes cuenta? Regístrate */
 .links {
-    text-align: center;
+    text-align: left;
     font-size: 14px;
     color: #000;
 }
