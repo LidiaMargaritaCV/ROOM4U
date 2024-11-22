@@ -8,8 +8,7 @@ const presupuestoMax = document.getElementById("presupuestoMax");
 
 // Mostrar/ocultar ventana flotante
 barraBusqueda.addEventListener("click", () => {
-    ventanaFlotante.classList.toggle("oculto");
-    ventanaFlotante.style.display = ventanaFlotante.style.display === "none" ? "block" : "none";
+    ventanaFlotante.style.display = (ventanaFlotante.style.display === "block") ? "none" : "block";
 });
 
 // Activar selección de botones
@@ -25,11 +24,18 @@ botonesDelegaciones.forEach(button => {
     });
 });
 
-// Sincronizar barra y presupuesto
+// Sincronizar valores de la barra y los campos
 barraPresupuesto.addEventListener("input", () => {
     presupuestoMin.value = barraPresupuesto.value;
 });
 
 presupuestoMin.addEventListener("input", () => {
     barraPresupuesto.value = presupuestoMin.value;
+});
+
+presupuestoMax.addEventListener("input", () => {
+    if (parseInt(presupuestoMax.value) < parseInt(presupuestoMin.value)) {
+        alert("El valor máximo no puede ser menor al mínimo.");
+        presupuestoMax.value = presupuestoMin.value;
+    }
 });

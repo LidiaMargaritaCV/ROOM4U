@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room4U - Filtrar Inmuebles</title>
+    <title>Room4U - Filtrado de Búsqueda</title>
     <!-- Fuente personalizada -->
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <!-- Vincular CSS -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
-    <!-- Vincular CSS del menú-->
     <link rel="stylesheet" href="Assets/CSS/menudesplegable/styles.css">
 </head>
 <body>
     <!-- Cabecera -->
     <header>
-        <a href="index.html">
+        <!-- Logo Room4U -->
+        <a href="./index.html">
             <img src="Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
         </a>
+        <!-- Menú hamburguesa -->
         <div class="menu-hamburguesa" id="menuToggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
+        <!-- Menú desplegable -->
         <ul class="menu-desplegable" id="menu">
             <li><a href="./inicio-sesion/index.html">Iniciar sesión</a></li>
             <li><a href="./publicar/index.html">Publicar</a></li>
@@ -31,62 +33,52 @@
 
     <!-- Barra de búsqueda -->
     <main>
-        <div class="barra-busqueda" id="barraBusqueda">
+        <div id="barraBusqueda" class="barra-busqueda">
             Búsqueda de inmueble
             <img src="Assets/IMG/lupa.png" alt="Buscar">
         </div>
 
-        <!-- Ventana flotante del filtro -->
-        <div class="ventana-flotante oculto" id="ventanaFlotante">
+        <!-- Ventana flotante -->
+        <div id="ventanaFlotante" class="ventana-flotante oculto">
             <h2>Buscar inmueble</h2>
-            
-            <!-- ¿Qué estás buscando? -->
             <div class="filtro-seccion">
                 <p>¿Qué estás buscando?</p>
                 <div class="opciones">
-                    <button type="button" class="opcion">Casa</button>
-                    <button type="button" class="opcion">Cuarto</button>
-                    <button type="button" class="opcion">Departamento</button>
+                    <button>Casa</button>
+                    <button>Cuarto</button>
+                    <button>Departamento</button>
                 </div>
             </div>
-
-            <!-- ¿Cuál es tu presupuesto? -->
             <div class="filtro-seccion">
                 <p>¿Cuál es tu presupuesto?</p>
-                <input type="range" id="barraPresupuesto" min="0" max="100000" step="500" value="5000">
+                <input type="range" id="barraPresupuesto" min="0" max="100000" step="500" value="0">
                 <div class="presupuesto">
-                    <input type="number" id="presupuestoMin" placeholder="Precio mínimo" value="0">
-                    <input type="number" id="presupuestoMax" placeholder="Precio máximo" value="100000">
+                    <input type="number" id="presupuestoMin" placeholder="Mínimo" min="0" max="100000">
+                    <input type="number" id="presupuestoMax" placeholder="Máximo" min="0" max="100000">
                 </div>
             </div>
-
-            <!-- Selecciona las delegaciones -->
             <div class="filtro-seccion">
                 <p>Selecciona las delegaciones donde quieres rentar</p>
                 <div class="delegaciones">
-                    <button type="button" class="delegacion">Álvaro Obregón</button>
-                    <button type="button" class="delegacion">Gustavo A. Madero</button>
-                    <button type="button" class="delegacion">Tláhuac</button>
-                    <button type="button" class="delegacion">Coyoacán</button>
-                    <button type="button" class="delegacion">Venustiano Carranza</button>
-                    <button type="button" class="delegacion">Miguel Hidalgo</button>
-                    <button type="button" class="delegacion">Cuauhtémoc</button>
-                    <button type="button" class="delegacion">Iztacalco</button>
-                    <button type="button" class="delegacion">Cuajimalpa</button>
-                    <button type="button" class="delegacion">Tlalpan</button>
-                    <button type="button" class="delegacion">Benito Juárez</button>
-                    <button type="button" class="delegacion">Milpa Alta</button>
-                    <button type="button" class="delegacion">La Magdalena Contreras</button>
-                    <button type="button" class="delegacion">Iztapalapa</button>
-                    <button type="button" class="delegacion">Azcapotzalco</button>
-                    <button type="button" class="delegacion">Xochimilco</button>
+                    <button>Álvaro Obregón</button>
+                    <button>Benito Juárez</button>
+                    <button>Coyoacán</button>
+                    <button>Cuajimalpa</button>
+                    <button>Cuauhtémoc</button>
+                    <button>Gustavo A. Madero</button>
+                    <button>La Magdalena Contreras</button>
+                    <button>Miguel Hidalgo</button>
+                    <button>Tláhuac</button>
+                    <button>Tlalpan</button>
+                    <button>Venustiano Carranza</button>
+                    <button>Xochimilco</button>
+                    <button>Milpa Alta</button>
+                    <button>Azcapotzalco</button>
+                    <button>Iztapalapa</button>
+                    <button>Iztacalco</button>
                 </div>
             </div>
-
-            <!-- Botón buscar -->
-            <div class="filtro-seccion">
-                <button id="botonBuscar" class="boton-accion">Buscar inmueble</button>
-            </div>
+            <button class="boton-accion">Buscar inmueble</button>
         </div>
     </main>
 
