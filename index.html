@@ -8,45 +8,86 @@
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <!-- Vincular CSS -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
-    <!-- Vincular CSS del menú-->
+    <!-- Vincular CSS del menú -->
     <link rel="stylesheet" href="Assets/CSS/menudesplegable/styles.css">
-
+    <!-- Vincular CSS del filtro -->
+    <link rel="stylesheet" href="Assets/CSS/filtro-busqueda/style.css">
 </head>
 <body>
     <!-- Cabecera -->
     <header>
         <!-- Logo Room4U -->
-        <img src="Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        <a href="index.html">
+            <img src="Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
         <!-- Menú hamburguesa -->
         <div class="menu-hamburguesa" id="menuToggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
-    <!-- Menú desplegable -->
-    <ul class="menu-desplegable" id="menu">
-        <!-- Enlace para "Iniciar sesión" -->
-        <li><a href="./inicio-sesion/index.html">Iniciar sesión</a></li>
-    
-        <!-- Enlace para "Publicar" -->
-        <li><a href="./publicar/index.html">Publicar</a></li>
-    
-        <!-- Enlace para "Favoritos" -->
-        <li><a href="./favoritos/index.html">Favoritos</a></li>
-    </ul>
+        <!-- Menú desplegable -->
+        <ul class="menu-desplegable" id="menu">
+            <!-- Enlace para "Iniciar sesión" -->
+            <li><a href="./inicio-sesion/index.html">Iniciar sesión</a></li>
+        
+            <!-- Enlace para "Publicar" -->
+            <li><a href="./publicar/index.html">Publicar</a></li>
+        
+            <!-- Enlace para "Favoritos" -->
+            <li><a href="./favoritos/index.html">Favoritos</a></li>
+        </ul>
     </header>
 
-    <!-- Barra de búsqueda -->
+    <!-- Contenido principal -->
     <main>
-        <div class="barra-busqueda">
-                  Búsqueda de inmueble
-                <img src="Assets/IMG/lupa.png" alt="Buscar">
+        <!-- Barra de búsqueda -->
+        <div class="barra-busqueda" id="searchButton">
+            <span>Búsqueda de inmueble</span>
+            <img src="Assets/IMG/lupa.png" alt="Buscar">
+        </div>
+
+        <!-- Ventana flotante -->
+        <div class="search-modal" id="searchModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Buscar inmueble</h2>
+                <form>
+                    <!-- Filtro de tipo de inmueble -->
+                    <p><strong>¿Qué estás buscando?</strong></p>
+                    <div class="search-options">
+                        <label><input type="checkbox" name="tipo" value="Casa"> Casa</label>
+                        <label><input type="checkbox" name="tipo" value="Cuarto"> Cuarto</label>
+                        <label><input type="checkbox" name="tipo" value="Departamento"> Departamento</label>
+                    </div>
+
+                    <!-- Filtro de presupuesto -->
+                    <p><strong>¿Cuál es tu presupuesto?</strong></p>
+                    <input type="range" id="priceRange" min="1000" max="10000" step="500" value="5000">
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="Precio mínimo" value="1000">
+                        <input type="number" id="maxPrice" placeholder="Precio máximo" value="10000">
+                    </div>
+
+                    <!-- Filtro de delegaciones -->
+                    <p><strong>Selecciona las delegaciones donde quieres rentar</strong></p>
+                    <div class="delegations">
+                        <label><input type="checkbox" value="Álvaro Obregón"> Álvaro Obregón</label>
+                        <label><input type="checkbox" value="Gustavo A. Madero"> Gustavo A. Madero</label>
+                        <label><input type="checkbox" value="Coyoacán"> Coyoacán</label>
+                        <!-- Agrega más delegaciones según sea necesario -->
+                    </div>
+
+                    <!-- Botón de búsqueda -->
+                    <button type="submit" class="search-submit">Buscar Inmueble</button>
+                </form>
+            </div>
         </div>
     </main>
 
-    <!-- Vincular JS -->
+    <!-- Vincular scripts -->
     <script src="Assets/JS/script.js" defer></script>
-    <!-- Vincular JS del menú -->
     <script src="Assets/JS/menu/menu.js" defer></script>
+    <script src="Assets/JS/filtro-busqueda/script.js" defer></script>
 </body>
 </html>
