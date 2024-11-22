@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Assets/CSS/style.css">
+    <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
 </head>
 <body>
-    <!-- Cabecera amarilla con menú siempre aparecerá en todas las páginas -->
-    <header class="header">
-        <!-- Logo -->
+    <!-- Cabecera -->
+    <header>
+        <!-- Logo Room4U -->
         <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
-        <!-- Menú desplegable -->
+        <!-- Menú hamburguesa -->
         <div class="menu-hamburguesa" id="menuToggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
+        <!-- Menú desplegable -->
         <ul class="menu-desplegable" id="menu">
             <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
             <li><a href="../publicar/index.html">Publicar</a></li>
@@ -55,6 +57,8 @@
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    <!-- Vincular JS -->
+    <script src="../Assets/JS/script.js" defer></script>
+    <script src="../Assets/JS/menu/menu.js" defer></script>
 </body>
 </html>
