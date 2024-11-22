@@ -42,32 +42,6 @@ header {
     border-radius: 2px;
 }
 
-.menu-desplegable {
-    list-style: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: none; /* Inicialmente oculto */
-    position: absolute;
-    right: 20px;
-    top: 70px; /* Igual que la altura de la cabecera */
-    z-index: 100;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.menu-desplegable li {
-    padding: 10px 20px;
-}
-
-.menu-desplegable a {
-    text-decoration: none;
-    color: #333;
-}
-
-.menu-desplegable a:hover {
-    color: #FFD700; /* Color amarillo al pasar el mouse */
-}
-
 /* Contenedor principal */
 .main-container {
     max-width: 800px;
