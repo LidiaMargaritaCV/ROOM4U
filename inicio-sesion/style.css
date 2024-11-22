@@ -68,21 +68,19 @@ header {
 /* Contenedor principal */
 .main-container {
     display: flex;
-    justify-content: center;
     align-items: stretch;
     gap: 0; /* Espaciado entre la imagen y el formulario */
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     margin-top: 40px;    /*Centímetros de la cabecera hacia abajo*/
-    align-items: stretch;
 }
 
 /* Imagen decorativa */
 .login-image img {
-    width: 350px;
-    height: 100%;
+   
     border: none;
-    box-shadow: none /* Sombra decorativa */
     margin: 0;
+    padding: 0;
 }
 
 /* Contenedor del formulario */
@@ -91,8 +89,6 @@ header {
     padding: 0;
     border: 1px solid #b8b3b3;
     border: none;
-    width: 400px;
-    height: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
