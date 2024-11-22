@@ -26,39 +26,41 @@
         </ul>
     </header>
 
-    <!-- Contenedor principal -->
-    <main class="main-container">
-        <!-- Imagen decorativa -->
-        <div class="login-image">
-            <img src="../Assets/IMG/login-image.jpg" alt="Imagen decorativa de inicio de sesión">
+ <!-- Contenedor principal -->
+ <main class="main-container">
+    <!-- Imagen decorativa -->
+    <div class="login-image">
+        <img src="../Assets/IMG/login-image.jpg" alt="Imagen decorativa de inicio de sesión">
+    </div>
+    <!-- Contenedor del formulario -->
+    <div class="login-form-container">
+        <!-- Títulos centrados correctamente -->
+        <div class="form-header">
+            <h2>¡Bienvenido de nuevo!</h2>
+            <p>Iniciar sesión</p>
         </div>
-        <!-- Contenedor del formulario -->
-        <div class="login-form-container">
-            <!-- Títulos centrados correctamente -->
-            <div class="form-header">
-                <h2>¡Bienvenido de nuevo!</h2>
-                <p>Iniciar sesión</p>
+        <!-- Formulario -->
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
             </div>
-            <!-- Formulario -->
-            <form id="loginForm">
-                <div class="input-group">
-                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <span class="toggle-password" id="togglePassword">👁️</span>
-                </div>
-                <button type="submit" class="login-button">Iniciar sesión</button>
-            </form>
-            <!-- Enlaces -->
-            <div class="links">
-                <a href="#" id="forgot-password">Olvidé mi contraseña</a>
-                <p>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <span class="toggle-password" id="togglePassword">👁️</span>
             </div>
+            <button type="submit" class="login-button">Iniciar sesión</button>
+        </form>
+        <!-- Enlaces -->
+        <div class="links">
+            <a href="#" id="forgot-password">Olvidé mi contraseña</a>
+            <p>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
         </div>
-    </main>
-    <!-- Vincular JS -->
-    <script src="../Assets/JS/script.js" defer></script>
-    <script src="../Assets/JS/menu/menu.js" defer></script>
+    </div>
+</main>
+<!-- Vincular JS -->
+<script src="Assets/JS/script.js" defer></script>
+<!-- Vincular JS del menú -->
+<script src="Assets/JS/menu/menu.js" defer></script>
+
 </body>
 </html>
