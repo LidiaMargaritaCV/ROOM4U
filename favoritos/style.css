@@ -41,6 +41,36 @@ header {
     border-radius: 2px;
 }
 
+/* Menú desplegable */
+.menu-desplegable {
+    list-style: none;
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 70px; /* Debajo de la cabecera */
+    right: 20px; /* Pegado al lado derecho */
+    z-index: 100; /* Asegura que quede encima de otros elementos */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 10px 0;
+}
+
+.menu-desplegable li {
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+.menu-desplegable a {
+    text-decoration: none; /* Quitar subrayado */
+    color: #333; /* Texto gris oscuro */
+}
+
+.menu-desplegable a:hover {
+    background-color: #FFD700; /* Fondo amarillo brillante al pasar el mouse */
+    color: #fff; /* Texto blanco */
+}
+
+
 /* Contenedor principal */
 .main-container {
     padding: 20px;
