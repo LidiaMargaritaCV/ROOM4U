@@ -70,7 +70,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 20px; /* Espaciado entre la imagen y el formulario */
+    gap: 0; /* Espaciado entre la imagen y el formulario */
     padding: 20px;
     margin-top: 40px;    /*Centímetros de la cabecera hacia abajo*/
     align-items: stretch;
@@ -78,10 +78,11 @@ header {
 
 /* Imagen decorativa */
 .login-image img {
-    width: auto;
-    height: 100%;
-    border-radius: 10px 0 0 10px;
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra decorativa */
+    margin: 0;
 }
 
 /* Contenedor del formulario */
