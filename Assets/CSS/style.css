@@ -52,37 +52,45 @@ main {
 
 /* Barra de búsqueda estilizada */
 .barra-busqueda {
-    display: flex; /* Alinear elementos horizontalmente */
-    align-items: center; /* Centrar elementos verticalmente */
-    justify-content: space-between; /* Texto a la izquierda, lupa a la derecha */
+    display: flex; /* Alinear texto y lupa horizontalmente */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Separar el texto y la lupa */
     background-color: #fff; /* Fondo blanco */
     color: #333; /* Texto oscuro */
-    border: 2px solid #333; /* Mantener el borde de la barra */
+    border: 2px solid #333; /* Mantener el borde visible */
     border-radius: 25px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    width: 600px; /* Ancho de la barra */
-    height: 50px; /* Altura consistente para la barra */
+    padding: 5px 15px; /* Ajustar el espaciado interno */
+    width: 600px; /* Ancho fijo de la barra */
+    height: 50px; /* Altura fija de la barra */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    font-size: 18px; /* Tamaño del texto más grande */
-    font-weight: bold; /* Texto en negrita */
-    background: none; /* Asegura que no haya fondo en el texto */
-    margin: 10px auto; /* Espacio controlado, menos margen */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita para el texto */
+    margin: 20px auto; /* 20px = 2 cm debajo de la cabecera */
     position: relative; /* Necesario para posicionar elementos internos */
-    text-align: left; /* Alinear texto correctamente */
+    text-align: left; /* Asegurar que el texto esté alineado a la izquierda */
+    background: none; /* Elimina cualquier fondo extraño */
+    border-spacing: 0; /* Evita espacios internos no deseados */
+    line-height: 1; /* Asegura que el texto no tenga extra margen */
 }
 
-/* Efecto al pasar el mouse */
+/* Quitar efecto extraño del texto */
+.barra-busqueda::after {
+    content: ''; /* Vacío para evitar pseudo-elementos innecesarios */
+    display: none;
+}
+
+/* Lupa ajustada */
+.barra-busqueda img {
+    position: absolute; /* Relativo al contenedor */
+    right: 20px; /* Alineada al borde derecho */
+    top: 50%; /* Centrada verticalmente */
+    transform: translateY(-50%); /* Ajuste perfecto de centrado */
+    width: 25px; /* Tamaño ajustado de la lupa */
+    height: 25px; /* Tamaño ajustado de la lupa */
+}
+
+/* Hover en la barra */
 .barra-busqueda:hover {
     background-color: #f0f0f0; /* Fondo más claro al pasar el mouse */
-    transform: scale(1.02); /* Pequeño efecto de agrandamiento */
-}
-
-/* Ícono de la lupa */
-.barra-busqueda img {
-    position: absolute; /* Posicionar relativo al contenedor */
-    right: 20px; /* Fijar al extremo derecho */
-    top: 50%; /* Centrar verticalmente */
-    transform: translateY(-50%);
-    width: 30px; /* Tamaño más grande de la lupa */
-    height: 30px; /* Tamaño más grande de la lupa */
+    transform: scale(1.02); /* Ligero efecto de agrandamiento */
 }
