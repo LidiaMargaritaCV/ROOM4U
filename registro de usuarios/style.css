@@ -66,8 +66,8 @@ h1 {
 
 /* Botón Estudiante y Propietario */
 button {
-    background-color: #32CD32; /* Verde brillante */
-    color: white;
+    background-color: #2fdb2f; /* Verde brillante */
+    color: rgb(17, 15, 15);
     font-size: 18px;
     font-weight: bold;
     padding: 15px 30px;
@@ -80,7 +80,7 @@ button {
 }
 
 button:hover {
-    background-color: #28A428; /* Verde más oscuro al pasar el mouse */
+    background-color: #2fdb2f8; /* Verde más oscuro al pasar el mouse */
 }
 
 /* Ajustes para el texto dentro de los botones */
