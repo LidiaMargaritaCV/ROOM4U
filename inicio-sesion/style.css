@@ -1,106 +1,122 @@
-/* Estilo general */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
+/* Cabecera amarilla */
 .header {
-    text-align: center;
     background-color: #FFD700;
     padding: 15px;
+    text-align: left;
 }
 
-.header-title {
+.header h1 {
     margin: 0;
     color: #333;
     font-size: 24px;
-    font-weight: bold;
 }
 
+/* Contenedor principal */
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 800px;
-    max-width: 100%;
-    overflow: hidden;
+    gap: 40px; /* Espaciado entre la imagen y el formulario */
+    padding: 40px;
 }
 
-.login-section {
-    display: flex;
-    width: 100%;
-}
-
+/* Imagen decorativa */
 .login-image img {
-    width: 100%;
+    width: 350px;
     height: auto;
+    border-radius: 10px;
 }
 
+/* Contenedor del formulario */
 .login-form-container {
-    padding: 20px;
-    flex: 1;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    position: relative; /* Para ajustes de posicionamiento */
 }
 
-h2 {
+/* Títulos */
+.form-header {
+    text-align: right; /* Ajustar hacia la derecha */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.form-header h2 {
+    font-size: 24px;
+    margin: 0;
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.form-header p {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    color: #666;
 }
 
-input {
-    padding: 10px;
+/* Inputs */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-input:focus {
-    border-color: #FFD700;
-    outline: none;
-}
-
-button {
-    padding: 10px;
-    background-color: #FFD700;
-    border: none;
-    border-radius: 5px;
+    font-size: 16px;
     color: #333;
-    font-weight: bold;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* Ojo para mostrar contraseña */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #FFC107;
+/* Botón de iniciar sesión */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4A4AFF;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.login-button:hover {
+    background-color: #3333FF;
+}
+
+/* Enlaces */
+.links {
+    text-align: center;
+    font-size: 14px;
+    color: #000;
 }
 
 .links a {
-    color: #FFD700;
+    color: #000;
     text-decoration: none;
-    font-size: 14px;
 }
 
 .links a:hover {
     text-decoration: underline;
-}
-
-#error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
 }
