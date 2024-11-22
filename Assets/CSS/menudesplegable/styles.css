@@ -1,0 +1,39 @@
+/* Menú desplegable */
+.menu-desplegable {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    top: 70px; /* Ajusta según la altura de tu cabecera */
+    right: 20px; /* Alinea el menú hacia la derecha */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.menu-desplegable li {
+    padding: 10px 15px; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Línea divisoria */
+}
+
+.menu-desplegable li:last-child {
+    border-bottom: none; /* Sin línea en la última opción */
+}
+
+.menu-desplegable li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #000; /* Texto negro */
+    font-size: 16px; /* Tamaño del texto */
+    display: block; /* Cada opción ocupa toda la fila */
+}
+
+.menu-desplegable li a:hover {
+    background-color: #f0f0f0; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Transición para una animación suave */
+.menu-desplegable {
+    transition: all 0.3s ease-in-out;
+}

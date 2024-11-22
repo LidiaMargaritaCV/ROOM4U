@@ -26,6 +26,8 @@ header {
     object-fit: contain; /* Mantener proporciones del logo */
 }
 
+/*Menú hamburguesa (solo el icono)*/
+
 .menu-hamburguesa {
     display: flex;
     flex-direction: column;

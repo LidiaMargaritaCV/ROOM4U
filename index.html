@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <!-- Vincular CSS -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
+    <!-- Vincular CSS del menú-->
+    <link rel="stylesheet" href="Assets/CSS/menudesplegable/styles.css">
+
 </head>
 <body>
     <!-- Cabecera -->
@@ -15,11 +18,17 @@
         <!-- Logo Room4U -->
         <img src="Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
         <!-- Menú hamburguesa -->
-        <div class="menu-hamburguesa">
+        <div class="menu-hamburguesa" id="menuToggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
+    <!-- Menú desplegable -->
+    <ul class="menu-desplegable" id="menu">
+            <li><a href="#">Iniciar sesión</a></li>
+            <li><a href="#">Publicar</a></li>
+            <li><a href="#">Favoritos</a></li>
+        </ul>
     </header>
 
     <!-- Barra de búsqueda -->
@@ -34,5 +43,7 @@
 
     <!-- Vincular JS -->
     <script src="Assets/JS/script.js" defer></script>
+    <!-- Vincular JS del menú -->
+    <script src="Assets/JS/menu/menu.js" defer></script>
 </body>
 </html>
