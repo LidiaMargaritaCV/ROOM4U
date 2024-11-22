@@ -1,22 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const barraBusqueda = document.getElementById("barraBusqueda");
-    const searchModal = document.getElementById("searchModal");
-    const closeModal = document.getElementById("closeModal");
+const barraBusqueda = document.getElementById("barraBusqueda");
+const ventanaFlotante = document.getElementById("ventanaFlotante");
+const botonesOpciones = document.querySelectorAll(".opciones button");
+const botonesDelegaciones = document.querySelectorAll(".delegaciones button");
+const barraPresupuesto = document.getElementById("barraPresupuesto");
+const presupuestoMin = document.getElementById("presupuestoMin");
+const presupuestoMax = document.getElementById("presupuestoMax");
 
-    // Abrir modal
-    barraBusqueda.addEventListener("click", () => {
-        searchModal.classList.add("active");
-    });
+// Mostrar/ocultar ventana flotante
+barraBusqueda.addEventListener("click", () => {
+    ventanaFlotante.classList.toggle("oculto");
+    ventanaFlotante.style.display = ventanaFlotante.style.display === "none" ? "block" : "none";
+});
 
-    // Cerrar modal
-    closeModal.addEventListener("click", () => {
-        searchModal.classList.remove("active");
+// Activar selección de botones
+botonesOpciones.forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
     });
+});
 
-    // Cerrar modal al hacer clic fuera
-    searchModal.addEventListener("click", (event) => {
-        if (event.target === searchModal) {
-            searchModal.classList.remove("active");
-        }
+botonesDelegaciones.forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
     });
+});
+
+// Sincronizar barra y presupuesto
+barraPresupuesto.addEventListener("input", () => {
+    presupuestoMin.value = barraPresupuesto.value;
+});
+
+presupuestoMin.addEventListener("input", () => {
+    barraPresupuesto.value = presupuestoMin.value;
 });
