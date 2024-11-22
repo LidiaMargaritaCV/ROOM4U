@@ -1,3 +1,10 @@
+document.getElementById("togglePassword").addEventListener("click", function () {
+    const passwordField = document.getElementById("password");
+    const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+    passwordField.setAttribute("type", type);
+    this.textContent = type === "password" ? "👁️" : "🙈"; // Cambiar el ícono
+});
+// Validación del formulario de inicio de sesión
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Evita que se recargue la página
 
@@ -6,7 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     // Validación simple para el correo
     if (!validateEmail(email)) {
-        document.getElementById("error-message").textContent = "Por favor, ingresa un correo válido.";
+        alert("Por favor, ingresa un correo válido.");
         return;
     }
 
@@ -14,13 +21,13 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         alert("Inicio de sesión exitoso.");
         window.location.href = "../index.html"; // Redirige a la página principal
     } else {
-        document.getElementById("error-message").textContent = "Correo o contraseña incorrectos.";
+        alert("Correo o contraseña incorrectos.");
     }
 });
 
-// Validación de formato de correo
+// Validación del formato del correo
 function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar correos
     return re.test(email);
 }
 
@@ -32,6 +39,7 @@ document.getElementById("forgot-password").addEventListener("click", function ()
 // Enlace para "Regístrate"
 document.getElementById("register-link").addEventListener("click", function () {
     window.location.href = "../registro/index.html"; // Redirige a la página de registro
+});
 
 // Función para mostrar/ocultar contraseña
 document.getElementById("togglePassword").addEventListener("click", function () {
@@ -40,11 +48,5 @@ document.getElementById("togglePassword").addEventListener("click", function () 
     passwordField.setAttribute("type", type);
 
     // Cambia el ícono del ojito según el estado
-    document.getElementById("togglePassword").addEventListener("click", function () {
-        const passwordField = document.getElementById("password");
-        const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
-        passwordField.setAttribute("type", type);
-        this.textContent = type === "password" ? "👁️" : "🙈"; // Cambiar el ícono
-
-    });
-    
+    this.textContent = type === "password" ? "👁️" : "🙈";
+});
