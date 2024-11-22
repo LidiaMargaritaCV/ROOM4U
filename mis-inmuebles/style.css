@@ -26,6 +26,42 @@ header {
     object-fit: contain;
 }
 
+/*menu hamburguesa*/
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 70px; /* Ajusta según la altura de tu cabecera */
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menu-desplegable li {
+    padding: 10px 20px;
+}
+
+.menu-desplegable li a {
+    text-decoration: none;
+    color: #333;
+}
+
+
 /* Contenedor principal */
 .main-container {
     max-width: 800px;
