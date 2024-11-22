@@ -103,3 +103,8 @@
     color: #6d6dff;
     text-decoration: none;
 }
+
+/* Este es un comentario de prueba */
+body {
+    background-color: red; /* Cambia el color de fondo */
+}
