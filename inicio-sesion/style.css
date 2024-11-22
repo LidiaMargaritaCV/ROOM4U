@@ -69,37 +69,28 @@ header {
 .main-container {
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    gap: 0; /* Espaciado entre la imagen y el formulario */
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    gap: 40px; /* Espaciado entre la imagen y el formulario */
     padding: 20px;
-    margin-top: 40px;    /*Centímetros de la cabecera hacia abajo*/
-    align-items: stretch;
 }
 
 /* Imagen decorativa */
 .login-image img {
     width: 350px;
-    height: 100%;
-    border: none;
+    height: auto;
+    border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra decorativa */
-    margin: 0;
 }
 
 /* Contenedor del formulario */
 .login-form-container {
-    background-color: #b8b3b3;
-    padding: 0;
-    border: 1px solid #b8b3b3;
-    border: none;
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     width: 400px;
-    height: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin: 0;
-
 }
 
 /* Títulos */
@@ -167,7 +158,7 @@ header {
 
 /* Enlaces para olvide mi contraseña y ¿No tienes cuenta? Regístrate */
 .links {
-    text-align: left;
+    text-align: center;
     font-size: 14px;
     color: #000;
 }
