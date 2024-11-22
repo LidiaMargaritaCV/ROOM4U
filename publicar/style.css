@@ -10,7 +10,7 @@ header {
 }
 
 .logo {
-    height: 70px; /* Igual que en la página principal */
+    height: 180px; /* Igual que en la página principal */
     object-fit: contain; /* Mantener proporciones */
     cursor: pointer; /* Cambiar el cursor al pasar el mouse */
 }
