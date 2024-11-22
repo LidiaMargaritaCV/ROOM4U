@@ -45,33 +45,35 @@ header {
 /* Barra de búsqueda estilizada */
 .barra-busqueda {
     display: flex; /* Alinear texto y lupa horizontalmente */
-    align-items: center; /* Centrar verticalmente los elementos */
+    align-items: center; /* Centrar verticalmente */
     justify-content: space-between; /* Separar texto y lupa */
     background-color: #fff; /* Fondo blanco */
-    color: #333; /* Color del texto */
+    color: #666; /* Color tenue para el texto */
     border: 2px solid #333; /* Mantener el borde visible */
     border-radius: 25px; /* Bordes redondeados */
     padding: 10px 20px; /* Espaciado interno */
     width: 600px; /* Ancho fijo de la barra */
     height: 50px; /* Altura fija de la barra */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    font-size: 18px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
-    margin-top: 20px; /* 2 cm debajo de la cabecera */
+    font-size: 16px; /* Tamaño del texto más pequeño */
+    font-weight: normal; /* Texto no en negrita */
+    margin: 20px auto; /* 2 cm debajo de la cabecera, centrada horizontalmente */
     position: relative; /* Necesario para posicionar elementos internos */
     text-align: left; /* Asegurar que el texto esté alineado a la izquierda */
     outline: none; /* Elimina cualquier borde de enfoque */
-    cursor: pointer; /* El botón sigue siendo clicable */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
 }
 
-/* Elimina cualquier borde o sombra en el texto */
+/* Texto dentro de la barra */
 .barra-busqueda span {
+    color: #666; /* Texto más tenue */
+    font-weight: normal; /* Sin negrita */
     background: none; /* Sin fondo */
     border: none; /* Sin bordes */
     padding: 0; /* Sin espacio interno */
     margin: 0; /* Sin márgenes */
     box-shadow: none; /* Sin sombra */
-    line-height: 1; /* Ajustar el texto correctamente */
+    line-height: 1; /* Asegurar altura del texto */
 }
 
 /* Ícono de la lupa */
@@ -82,4 +84,10 @@ header {
     transform: translateY(-50%); /* Centrar perfectamente */
     width: 25px; /* Tamaño de la lupa */
     height: 25px; /* Tamaño de la lupa */
+}
+
+/* Hover en la barra */
+.barra-busqueda:hover {
+    background-color: #f9f9f9; /* Fondo más claro al pasar el mouse */
+    transform: scale(1.02); /* Ligero efecto de agrandamiento */
 }
