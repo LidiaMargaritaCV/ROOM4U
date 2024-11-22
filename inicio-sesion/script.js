@@ -28,8 +28,6 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-
-
 // Enlace para "Regístrate"
 document.getElementById("register-link").addEventListener("click", function () {
     window.location.href = "../registro/index.html"; // Redirige a la página de registro
@@ -43,4 +41,11 @@ document.getElementById("togglePassword").addEventListener("click", function () 
 
     // Cambiar el ícono según el estado
     this.textContent = type === "password" ? "👁️" : "🙈";
+});
+
+// Enlace para "Olvidé mi contraseña"
+document.getElementById("forgot-password").addEventListener("click", function (e) {
+    e.preventDefault(); // Previene el comportamiento predeterminado
+    // Redirige a la página de recuperar contraseña
+    window.location.href = "../inicio-sesion/recuperar/index.html";
 });
