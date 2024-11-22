@@ -50,7 +50,7 @@ h1 {
 }
 
 .photo {
-    background-color: #a2f8d0; /* Verde claro */
+    background-color: #20fa94; /* Verde claro */
     color: rgb(10, 6, 6);
     display: flex;
     justify-content: center;
@@ -63,8 +63,8 @@ h1 {
 
 /* Botón de editar */
 .edit-button {
-    background-color: #a99bfd;
-    color: white;
+    background-color: #a091fa;
+    color: rgb(10, 8, 8);
     font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
