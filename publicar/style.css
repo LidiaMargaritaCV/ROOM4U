@@ -6,27 +6,24 @@
 }
 
 body {
-    font-family: 'ADLaM Display', sans-serif;
-    background-color: #f9f9f9; /* Fondo claro */
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
 }
 
 /* Cabecera */
 header {
-    background-color: #FFD700; /* Amarillo brillante */
+    background-color: #FFD700;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: 70px; /* Ajustar la altura */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 70px;
 }
 
 .logo {
-    height: 180px; /* Tamaño ajustado del logo */
-    object-fit: contain;
+    height: 50px;
 }
 
-/* Menú hamburguesa */
 .menu-hamburguesa {
     display: flex;
     flex-direction: column;
@@ -41,18 +38,16 @@ header {
     border-radius: 2px;
 }
 
-/* Menú desplegable */
 .menu-desplegable {
     list-style: none;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display: none; /* Inicialmente oculto */
+    display: none;
     position: absolute;
-    right: 20px;
     top: 70px;
+    right: 20px;
     z-index: 100;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-desplegable li {
@@ -67,38 +62,48 @@ header {
 /* Contenedor principal */
 .main-container {
     max-width: 800px;
-    margin: auto;
+    margin: 50px auto;
     padding: 20px;
+}
+
+.titulo-publicar {
+    text-align: right;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Formulario */
+.formulario {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-fieldset {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-input, select, textarea, button {
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button {
-    background-color: #ffd700;
-    color: #fff;
+.campo {
+    margin-bottom: 20px;
+}
+
+.label-boton {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.boton {
+    background-color: #6d6dff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #e5c200;
+.boton:hover {
+    background-color: #5a5aff;
 }

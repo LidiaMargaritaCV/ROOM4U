@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicar Inmueble</title>
-    <!-- Vincular CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,55 +22,54 @@
         </ul>
     </header>
 
+    <!-- Contenido principal -->
     <main class="main-container">
-        <h1>Publicar Inmueble</h1>
-        <form id="publicarForm">
-            <label for="tipoInmueble">Tipo de Inmueble:</label>
-            <select id="tipoInmueble" required>
-                <option value="">Selecciona</option>
-                <option value="Casa">Casa</option>
-                <option value="Departamento">Departamento</option>
-                <option value="Cuarto">Cuarto</option>
-            </select>
+        <h1 class="titulo-publicar">Publicar Inmueble</h1>
+        <form id="publicarForm" class="formulario">
+            <div class="campo">
+                <label for="tipoInmueble" class="label-boton">Tipo de Inmueble</label>
+                <select id="tipoInmueble" required>
+                    <option value="">Selecciona</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Departamento">Departamento</option>
+                    <option value="Cuarto">Cuarto</option>
+                </select>
+            </div>
 
-            <fieldset>
+            <fieldset class="campo">
                 <legend>Ubicación</legend>
                 <input type="text" id="calle" placeholder="Calle" maxlength="50" required>
                 <input type="text" id="numeroExterior" placeholder="Número Exterior" maxlength="50" required>
                 <input type="text" id="numeroInterior" placeholder="Número Interior (opcional)" maxlength="50">
+                <input type="text" id="codigoPostal" placeholder="Código Postal" maxlength="5" required>
                 <input type="text" id="colonia" placeholder="Colonia" maxlength="50" required>
                 <select id="delegacion" required>
                     <option value="">Selecciona una delegación</option>
                     <option value="Álvaro Obregón">Álvaro Obregón</option>
-                    <option value="Gustavo A. Madero">Gustavo A. Madero</option>
-                    <option value="Tláhuac">Tláhuac</option>
                     <option value="Coyoacán">Coyoacán</option>
-                    <option value="Venustiano Carranza">Venustiano Carranza</option>
-                    <option value="Miguel Hidalgo">Miguel Hidalgo</option>
-                    <option value="Cuauhtemoc">Cuauhtemoc</option>
-                    <option value="Iztacalco">Iztacalco</option>
-                    <option value="Benito Juárez">Benito Juárez</option>
-                    <option value="Cuajimalpa">Cuajimalpa</option>
-                    <option value="Tlalpan">Tlalpan</option>
-                    <option value="Milpa Alta'">Milpa Alta</option>
-                    <option value="La Magdalena Contreras">La Magdalena Contreras</option>
-                    <option value="Iztapalapa">Iztapalapa</option>
-                    <option value="Azcapotzalco">Azcapotzalco</option>
-                    <option value="Xochimilco">Xochimilco</option>
+                    <!-- Agrega las demás delegaciones aquí -->
                 </select>
-                <input type="text" id="codigoPostal" placeholder="Código Postal" maxlength="5" required>
             </fieldset>
 
-            <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" maxlength="200" placeholder="Máximo 200 caracteres" required></textarea>
+            <div class="campo">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" maxlength="200" placeholder="Máximo 200 caracteres" required></textarea>
+            </div>
 
-            <label for="precio">Precio:</label>
-            <input type="text" id="precio" placeholder="Renta mensual en pesos" required>
+            <div class="campo">
+                <label for="precio">Ingresa el monto del inmueble</label>
+                <input type="text" id="precio" placeholder="Renta mensual en pesos mexicanos" required>
+            </div>
 
-            <label for="fotos">Subir Fotos (5-10 imágenes):</label>
-            <input type="file" id="fotos" accept=".jpg" multiple required>
+            <div class="campo">
+                <label for="fotos">Subir Fotos</label>
+                <button type="button" id="btnSubirFotos" class="boton">+</button>
+                <small>Mínimo 5 imágenes, Máximo 10 imágenes</small>
+            </div>
 
-            <button type="submit" id="submitInmueble">Subir Inmueble</button>
+            <div class="campo">
+                <button type="submit" id="submitInmueble" class="boton">Subir Inmueble</button>
+            </div>
         </form>
     </main>
 

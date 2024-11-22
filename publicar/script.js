@@ -1,10 +1,17 @@
-document.getElementById("publicarForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Evita recargar la página
+// Menú desplegable
+document.getElementById("menuToggle").addEventListener("click", function () {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+});
 
-    const confirmacion = confirm("¿Estás seguro que quieres publicar tu inmueble?");
-    if (confirmacion) {
-        alert("Inmueble publicado con éxito");
-    } else {
-        alert("Publicación cancelada");
-    }
+// Subir fotos
+const btnSubirFotos = document.getElementById("btnSubirFotos");
+btnSubirFotos.addEventListener("click", function () {
+    alert("Aquí podrás agregar tus imágenes");
+});
+
+// Validar y enviar formulario
+document.getElementById("publicarForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("¿Estás seguro de publicar tu inmueble?");
 });
