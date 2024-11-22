@@ -7,13 +7,13 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     // Validación simple para el correo
     if (!validateEmail(email)) {
-        document.getElementById("error-message").textContent = "Por favor, ingresa un correo válido.";
+        alert("Por favor, ingresa un correo válido.");
         return;
     }
 
     // Validación simple para contraseña vacía
     if (password.trim() === "") {
-        document.getElementById("error-message").textContent = "Por favor, ingresa tu contraseña.";
+        alert("Por favor, ingresa tu contraseña.");
         return;
     }
 
@@ -42,5 +42,10 @@ document.getElementById("register-link").addEventListener("click", function () {
 
 // Función para mostrar/ocultar contraseña
 document.getElementById("togglePassword").addEventListener("click", function () {
-    const passwordField = document.getElementById("password")});
-    
+    const passwordField = document.getElementById("password");
+    const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+    passwordField.setAttribute("type", type);
+
+    // Cambiar el ícono según el estado
+    this.textContent = type === "password" ? "👁️" : "🙈";
+});
