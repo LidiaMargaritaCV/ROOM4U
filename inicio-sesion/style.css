@@ -1,14 +1,30 @@
-/* Cabecera amarilla */
+/* Cabecera amarilla misma en todas las páginas*/
 .header {
     background-color: #FFD700;
     padding: 15px;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
-    margin: 0;
-    color: #333;
-    font-size: 24px;
+.logo {
+    height: 50px;
+    object-fit: contain;
+}
+
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
 }
 
 /* Contenedor principal */
@@ -29,9 +45,9 @@
 
 /* Contenedor del formulario */
 .login-form-container {
-    background-color: #f9f9f9;
+    background-color: #8b8787;
     padding: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid #8b8787;
     border-radius: 10px;
     width: 350px;
     display: flex;
@@ -47,18 +63,20 @@
 }
 
 .form-header h2 {
-    font-size: 24px;
-    margin: 0;
+    font-size: 28px; /* Cambia este valor para hacerlo más grande */
+    margin: 0 0 10px 0; /* Espaciado entre el título y el subtítulo */
     color: #333;
+    text-align: center; /* Para centrarlo */
 }
 
 .form-header p {
-    font-size: 18px;
-    margin: 5px 0 0 0;
+    font-size: 20px; /* Haz más grande el subtítulo */
+    margin: 0;
     color: #666;
+    text-align: center; /* Centrado */
 }
 
-/* Inputs */
+/* Inputs campos del correo electrónico y la contraseña*/
 .input-group {
     position: relative;
     margin-bottom: 20px;
@@ -68,8 +86,9 @@
 .input-group input {
     width: 100%;
     padding: 10px 40px 10px 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #333;
     border-radius: 5px;
+    background-color: #fff;
     font-size: 16px;
     color: #333;
 }
@@ -82,7 +101,7 @@
 .toggle-password {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 20px;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -93,7 +112,7 @@
     padding: 10px;
     border: none;
     border-radius: 25px;
-    background-color: #4A4AFF;
+    background-color: #6d6dff;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -102,10 +121,10 @@
 }
 
 .login-button:hover {
-    background-color: #3333FF;
+    background-color: #6d6dff;
 }
 
-/* Enlaces */
+/* Enlaces para olvide mi contraseña y ¿No tienes cuenta? Registrate*/
 .links {
     text-align: center;
     font-size: 14px;
@@ -115,8 +134,12 @@
 .links a {
     color: #000;
     text-decoration: none;
+    display: block; /* Para que sea más fácil alinearlo */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 10px; /* Espaciado entre ambos enlaces */
 }
 
-.links a:hover {
-    text-decoration: underline;
+.links p {
+    text-align: left; /* Alineación a la izquierda */
+    margin: 0;
 }

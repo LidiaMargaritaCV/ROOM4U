@@ -32,4 +32,13 @@ document.getElementById("forgot-password").addEventListener("click", function ()
 // Enlace para "Regístrate"
 document.getElementById("register-link").addEventListener("click", function () {
     window.location.href = "../registro/index.html"; // Redirige a la página de registro
+
+// Función para mostrar/ocultar contraseña
+document.getElementById("togglePassword").addEventListener("click", function () {
+    const passwordField = document.getElementById("password");
+    const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+    passwordField.setAttribute("type", type);
+
+    // Cambia el ícono del ojito según el estado
+    this.textContent = type === "password" ? "👁️" : "🙈";     
 });

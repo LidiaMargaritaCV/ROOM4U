@@ -7,10 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabecera amarilla -->
+    <!-- Cabecera amarilla con menú siempre aparecerá en todas las páginas -->
     <header class="header">
-        <h1>Tema principal</h1>
+        <!-- Logo -->
+        <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        <!-- Menú desplegable -->
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="../publicar/index.html">Publicar</a></li>
+            <li><a href="../favoritos/index.html">Favoritos</a></li>
+        </ul>
     </header>
+
     <!-- Contenedor principal -->
     <main class="main-container">
         <!-- Imagen decorativa -->
