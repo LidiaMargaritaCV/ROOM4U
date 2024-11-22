@@ -8,7 +8,7 @@
 body {
     font-family: 'ADLaM Display', sans-serif;
     background-color: #f9f9f9; /* Fondo claro */
-    color: #333; /* Color principal de texto */
+    
 }
 
 /* Cabecera */
@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-    height: 50px; /* Tamaño ajustado del logo */
+    height: 180px; /* Tamaño ajustado del logo */
     object-fit: contain;
 }
 
