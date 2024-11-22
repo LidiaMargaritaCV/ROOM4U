@@ -68,11 +68,10 @@ header {
 /* Contenedor principal */
 .main-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ocupa toda la altura de la ventana */
-    gap: 40px; /* Espaciado entre la imagen y el formulario */
-    padding: 20px;
+    align-items: stretch; /* Ambos elementos tendrán la misma altura */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 0; /* Sin espacio entre elementos */
+    margin-top: 20px; /* Espacio de 2 cm desde la cabecera */
 }
 
 /* Imagen decorativa */
@@ -80,62 +79,52 @@ header {
     width: 350px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra decorativa */
+    margin: 0; /* Elimina márgenes */
+    padding: 0;
+    display: block; /* Asegura que sea un bloque */
 }
 
 /* Contenedor del formulario */
 .login-form-container {
-    background-color: #fff;
+    background-color: #f0f0f0; /* Fondo más limpio y claro */
     padding: 30px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    width: 400px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 350px; /* Igual ancho que la imagen */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
 }
 
-/* Títulos */
+/* Títulos del formulario */
 .form-header h2 {
-    font-size: 28px; /* Tamaño del título */
-    margin: 0 0 10px 0;
+    font-size: 24px; /* Tamaño del título */
     color: #333;
-    text-align: center; /* Centrado */
+    text-align: center;
 }
 
 .form-header p {
-    font-size: 20px;
-    margin: 0 0 20px 0;
+    font-size: 18px;
     color: #666;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Inputs */
 .input-group {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 100%;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px 40px 10px 10px;
+    padding: 10px;
     border: 2px solid #333;
     border-radius: 5px;
-    background-color: #fff;
     font-size: 16px;
     color: #333;
-}
-
-.input-group input::placeholder {
-    color: #aaa;
-}
-
-/* Ojo para mostrar contraseña */
-.toggle-password {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    cursor: pointer;
 }
 
 /* Botón de iniciar sesión */
@@ -153,12 +142,12 @@ header {
 }
 
 .login-button:hover {
-    background-color: #5a5aff; /* Efecto al pasar el mouse */
+    background-color: #5a5aff; /* Color más oscuro al pasar el mouse */
 }
 
-/* Enlaces para olvide mi contraseña y ¿No tienes cuenta? Regístrate */
+/* Enlaces */
 .links {
-    text-align: center;
+    text-align: left; /* Ajuste alineado a la izquierda */
     font-size: 14px;
     color: #000;
 }
@@ -166,14 +155,8 @@ header {
 .links a {
     color: #000;
     text-decoration: none;
-    margin-bottom: 10px;
 }
 
 .links a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-}
-
-/* Ajuste del pie de página */
-.links p {
-    margin: 0;
+    text-decoration: underline;
 }
