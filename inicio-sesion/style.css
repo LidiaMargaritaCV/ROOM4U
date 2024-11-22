@@ -116,8 +116,8 @@ header {
     width: 100%;
     padding: 10px 40px 10px 10px; /* Espacio a la derecha para el ojito */
     border: 2px solid #333;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 25px;
+    font-size: 18px;
     color: #333;
 }
 
@@ -143,7 +143,7 @@ header {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 30px; /* Espaciado adicional debajo del cuadro de entrada */
+    margin-top: 10px; /* Espaciado adicional debajo del cuadro de entrada */
     margin-bottom: 15px;
 }
 
