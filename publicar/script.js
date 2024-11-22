@@ -1,7 +1,11 @@
 // Menú desplegable
 document.getElementById("menuToggle").addEventListener("click", function () {
     const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
+    if (menu.style.display === "block") {
+        menu.style.display = "none"; // Oculta el menú
+    } else {
+        menu.style.display = "block"; // Muestra el menú
+    }
 });
 
 // Validación y envío del formulario
