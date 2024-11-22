@@ -57,22 +57,21 @@ main {
     justify-content: space-between; /* Texto a la izquierda, lupa a la derecha */
     background-color: #fff; /* Fondo blanco */
     color: #333; /* Texto oscuro */
-    border: 2px solid #333; /* Borde visible */
+    border: 2px solid #333; /* Mantener el borde de la barra */
     border-radius: 25px; /* Bordes redondeados */
     padding: 10px 20px; /* Espaciado interno */
     width: 600px; /* Ancho de la barra */
     height: 50px; /* Altura consistente para la barra */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    font-size: 18px; /* Tamaño del texto */
+    font-size: 18px; /* Tamaño del texto más grande */
     font-weight: bold; /* Texto en negrita */
-    background: none;
-    border: 2px solid #333;
-    text-align: left;
-    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
-    position: relative; /* Necesario para posicionar la lupa */
-    margin: 20px auto; /* Centrar horizontalmente y dar espacio desde la cabecera */
+    background: none; /* Asegura que no haya fondo en el texto */
+    margin: 10px auto; /* Espacio controlado, menos margen */
+    position: relative; /* Necesario para posicionar elementos internos */
+    text-align: left; /* Alinear texto correctamente */
 }
 
+/* Efecto al pasar el mouse */
 .barra-busqueda:hover {
     background-color: #f0f0f0; /* Fondo más claro al pasar el mouse */
     transform: scale(1.02); /* Pequeño efecto de agrandamiento */
@@ -84,6 +83,6 @@ main {
     right: 20px; /* Fijar al extremo derecho */
     top: 50%; /* Centrar verticalmente */
     transform: translateY(-50%);
-    width: 30px; /* Tamaño de la lupa */
-    height: 30px;
+    width: 30px; /* Tamaño más grande de la lupa */
+    height: 30px; /* Tamaño más grande de la lupa */
 }
