@@ -1,20 +1,18 @@
-/* Cabecera amarilla misma en todas las páginas*/
+/* Cabecera amarilla misma en todas las páginas */
 header {
-    background-color: #FFD700; /* Amarillo brillante */
+    background-color: #FFD700;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: 70px; /* Ajusta la altura según el logo */
+    height: 70px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    height: 180px; /* Tamaño del logo ajustado */
-    object-fit: contain; /* Mantener proporciones del logo */
+    height: 180px;
+    object-fit: contain;
 }
-
-/*Menú hamburguesa (solo el icono)*/
 
 .menu-hamburguesa {
     display: flex;
@@ -30,14 +28,14 @@ header {
     border-radius: 2px;
 }
 
-
 /* Contenedor principal */
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Espaciado entre la imagen y el formulario */
-    padding: 40px;
+    gap: 40px;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 /* Imagen decorativa */
@@ -45,63 +43,52 @@ header {
     width: 350px;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor del formulario */
+/* Formulario */
 .login-form-container {
-    background-color: #ccc;
+    background-color: #f3f3f3;
     padding: 30px;
-    border: 1px solid #ccc;
+    border: 2px solid #ddd;
     border-radius: 10px;
     width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Para ajustes de posicionamiento */
 }
 
 /* Títulos */
-.form-header {
-    text-align: right; /* Ajustar hacia la derecha */
-    margin-bottom: 20px; /* Espaciado inferior */
-}
-
 .form-header h2 {
-    font-size: 28px; /* Cambia este valor para hacerlo más grande */
-    margin: 0 0 10px 0; /* Espaciado entre el título y el subtítulo */
+    font-size: 32px;
+    font-weight: bold;
     color: #333;
-    text-align: center; /* Para centrarlo */
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .form-header p {
-    font-size: 20px; /* Haz más grande el subtítulo */
+    font-size: 20px;
+    color: #555;
+    text-align: center;
     margin: 0;
-    color: #666;
-    text-align: center; /* Centrado */
 }
 
-/* Inputs campos del correo electrónico y la contraseña*/
-.input-group {
-    position: relative;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
+/* Inputs */
 .input-group input {
     width: 100%;
-    padding: 10px 40px 10px 10px;
-    border: 2px solid #333;
+    padding: 10px;
+    border: 2px solid #aaa;
     border-radius: 5px;
-    background-color: #fff;
     font-size: 16px;
-    color: #333;
+    margin-bottom: 15px;
 }
 
-.input-group input::placeholder {
-    color: #aaa;
+.input-group input:focus {
+    border-color: #333;
+    outline: none;
 }
 
-/* Ojo para mostrar contraseña */
 .toggle-password {
     position: absolute;
     top: 50%;
@@ -113,37 +100,28 @@ header {
 /* Botón de iniciar sesión */
 .login-button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 25px;
     background-color: #6d6dff;
-    color: #fff;
-    font-size: 16px;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #6d6dff;
+    background-color: #5b5bf7;
 }
 
-/* Enlaces para olvide mi contraseña y ¿No tienes cuenta? Registrate*/
-.links {
-    text-align: center;
-    font-size: 14px;
-    color: #000;
-}
-
+/* Enlaces */
 .links a {
-    color: #000;
+    color: #6d6dff;
     text-decoration: none;
-    display: block; /* Para que sea más fácil alinearlo */
-    text-align: left; /* Alineación a la izquierda */
-    margin-bottom: 10px; /* Espaciado entre ambos enlaces */
+    margin-bottom: 10px;
 }
 
-.links p {
-    text-align: left; /* Alineación a la izquierda */
-    margin: 0;
+.links a:hover {
+    text-decoration: underline;
 }
