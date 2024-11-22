@@ -56,7 +56,7 @@ main {
     justify-content: space-between;
     background-color: #fff; /* Fondo blanco */
     color: #333; /* Texto oscuro */
-    border: 2px solid #333; /* Borde oscuro */
+    border: none; /* Quitar el Borde  */
     border-radius: 25px; /* Bordes redondeados */
     padding: 10px 20px; /* Espaciado interno */
     width: 600px; /* Ancho del botón */
@@ -75,5 +75,5 @@ main {
 .barra-busqueda img {
     width: 20px; /* Tamaño del ícono */
     height: 20px;
-    margin-left: 10px; /* Espaciado entre el texto y la lupa */
+   
 }
