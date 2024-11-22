@@ -32,3 +32,9 @@ const saveButton = document.querySelector(".save");
 saveButton.addEventListener("click", () => {
     alert("Datos guardados correctamente (por implementar)");
 });
+
+// Botón "Editar Inmueble"
+const editButton = document.getElementById("editInmueble");
+editButton.addEventListener("click", () => {
+    alert("Función para editar inmueble (por implementar)");
+});
