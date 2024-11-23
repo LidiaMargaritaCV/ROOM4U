@@ -6,123 +6,94 @@
 }
 
 body {
-    font-family: 'ADLaM Display', sans-serif;
-    background-color: #f9f9f9; /* Fondo general */
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
 }
 
 /* Cabecera */
 header {
-    background-color: #FFD700; /* Amarillo brillante */
+    background-color: #FFD700;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     height: 70px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    height: 180px; /* Tamaño ajustado del logo */
-    object-fit: contain;
-}
-
-/* Menú hamburguesa */
-.menu-hamburguesa {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+    height: 50px;
 }
 
 .menu-hamburguesa span {
     background-color: #000;
     height: 3px;
     width: 25px;
-    border-radius: 2px;
+    display: block;
+    margin: 3px 0;
 }
 
 /* Barra de búsqueda */
 .barra-busqueda {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    color: #333;
-    border: 2px solid #161616;
-    border-radius: 25px;
-    padding: 10px 20px;
+    margin: 20px auto;
     width: 600px;
-    height: 50px;
-    margin: 70px auto;
+    padding: 10px 20px;
+    background: #FFF;
+    border: 2px solid #FFD700;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    position: relative;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-.barra-busqueda img {
-    position: absolute; /* Relativo a la barra */
-    right: 15px; /* Fijar al extremo derecho */
-    top: 50%; /* Centrar verticalmente dentro de la barra */
-    transform: translateY(-50%); /* Ajustar para centrar exactamente */
-    width: 20px; /* Cambia aquí el tamaño de la lupa */
-    height: 20px; /* Cambia aquí el tamaño de la lupa */
-    pointer-events: none; /* Para que no interfiera al hacer clic */
 }
 
-.barra-busqueda:hover {
-    background-color: #eee;
+.barra-busqueda .lupa {
+    width: 25px;
+    height: 25px;
 }
 
 /* Ventana flotante */
-.ventana-flotante {
+.filtro-contenedor {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f5f5dc; /* Fondo beige */
-    border-radius: 20px;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25); /* Sombra visible */
-    z-index: 1000;
-    border: 2px solid #FFD700; /* Marco amarillo suave */
-}
-
-.ventana-flotante h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.filtro-seccion {
-    margin-bottom: 20px;
-}
-
-.opciones button, .delegaciones button {
-    background-color: #fff;
-    color: #333;
-    padding: 10px;
-    border: 2px solid #ccc;
+    transform: translate(-50%, 0);
+    background: #FFF;
+    border: 2px solid #FFD700;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 20px;
+    width: 600px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.opciones button:hover, .delegaciones button:hover, .opciones button.active, .delegaciones button.active {
-    background-color: #FFD700;
-    color: #fff;
-}
-
-/* Botón de acción */
-.boton-accion {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #FFD700;
-    color: #333;
+.filtro-contenedor h2 {
     text-align: center;
-    border: none;
-    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+.boton-filtro {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #FFF;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+}
+
+.boton-filtro:hover, .boton-filtro.activo {
+    background-color: #FFD700;
+    color: #FFF;
+}
+
+.boton-buscar {
+    margin: 10px auto;
+    display: block;
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
 }
