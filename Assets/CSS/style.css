@@ -6,94 +6,123 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9; /* Fondo general */
 }
 
 /* Cabecera */
 header {
-    background-color: #FFD700;
+    background-color: #FFD700; /* Amarillo brillante */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     height: 70px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    height: 50px;
+    height: 180px; /* Tamaño ajustado del logo */
+    object-fit: contain;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .menu-hamburguesa span {
     background-color: #000;
     height: 3px;
     width: 25px;
-    display: block;
-    margin: 3px 0;
+    border-radius: 2px;
 }
 
 /* Barra de búsqueda */
 .barra-busqueda {
-    margin: 20px auto;
-    width: 600px;
-    padding: 10px 20px;
-    background: #FFF;
-    border: 2px solid #FFD700;
-    border-radius: 25px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #161616;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 600px;
+    height: 50px;
+    margin: 70px auto;
     cursor: pointer;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.barra-busqueda img {
+    position: absolute; /* Relativo a la barra */
+    right: 15px; /* Fijar al extremo derecho */
+    top: 50%; /* Centrar verticalmente dentro de la barra */
+    transform: translateY(-50%); /* Ajustar para centrar exactamente */
+    width: 20px; /* Cambia aquí el tamaño de la lupa */
+    height: 20px; /* Cambia aquí el tamaño de la lupa */
+    pointer-events: none; /* Para que no interfiera al hacer clic */
 }
 
-.barra-busqueda .lupa {
-    width: 25px;
-    height: 25px;
+.barra-busqueda:hover {
+    background-color: #eee;
 }
 
 /* Ventana flotante */
-.filtro-contenedor {
+.ventana-flotante {
     display: none;
     position: fixed;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
-    background: #FFF;
-    border: 2px solid #FFD700;
-    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5dc; /* Fondo beige */
+    border-radius: 20px;
     padding: 20px;
-    width: 600px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25); /* Sombra visible */
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFD700; /* Marco amarillo suave */
 }
 
-.filtro-contenedor h2 {
+.ventana-flotante h2 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.boton-filtro {
-    margin: 5px;
-    padding: 10px 15px;
-    background-color: #FFF;
-    border: 2px solid #FFD700;
-    border-radius: 5px;
+.filtro-seccion {
+    margin-bottom: 20px;
+}
+
+.opciones button, .delegaciones button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.boton-filtro:hover, .boton-filtro.activo {
+.opciones button:hover, .delegaciones button:hover, .opciones button.active, .delegaciones button.active {
     background-color: #FFD700;
-    color: #FFF;
+    color: #fff;
 }
 
-.boton-buscar {
-    margin: 10px auto;
+/* Botón de acción */
+.boton-accion {
     display: block;
+    width: 100%;
+    padding: 15px;
     background-color: #FFD700;
+    color: #333;
+    text-align: center;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #FFF;
+    border-radius: 25px;
     cursor: pointer;
-    font-weight: bold;
+    margin-top: 20px;
 }

@@ -1,33 +1,41 @@
 const barraBusqueda = document.getElementById("barraBusqueda");
-const filtroContenedor = document.getElementById("filtroContenedor");
-const botonesFiltro = document.querySelectorAll(".boton-filtro");
-const rangoMin = document.getElementById("rangoMin");
-const rangoMax = document.getElementById("rangoMax");
-const minValor = document.getElementById("minValor");
-const maxValor = document.getElementById("maxValor");
+const ventanaFlotante = document.getElementById("ventanaFlotante");
+const botonesOpciones = document.querySelectorAll(".opciones button");
+const botonesDelegaciones = document.querySelectorAll(".delegaciones button");
+const barraPresupuesto = document.getElementById("barraPresupuesto");
+const presupuestoMin = document.getElementById("presupuestoMin");
+const presupuestoMax = document.getElementById("presupuestoMax");
 
+// Mostrar/ocultar ventana flotante
 barraBusqueda.addEventListener("click", () => {
-    filtroContenedor.classList.toggle("oculto");
+    ventanaFlotante.style.display = (ventanaFlotante.style.display === "block") ? "none" : "block";
 });
 
-botonesFiltro.forEach(boton => {
-    boton.addEventListener("click", () => {
-        boton.classList.toggle("activo");
+// Activar selección de botones
+botonesOpciones.forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
     });
 });
 
-rangoMin.addEventListener("input", () => {
-    minValor.value = rangoMin.value;
+botonesDelegaciones.forEach(button => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+    });
 });
 
-rangoMax.addEventListener("input", () => {
-    maxValor.value = rangoMax.value;
+// Sincronizar valores de la barra y los campos
+barraPresupuesto.addEventListener("input", () => {
+    presupuestoMin.value = barraPresupuesto.value;
 });
 
-minValor.addEventListener("input", () => {
-    rangoMin.value = minValor.value;
+presupuestoMin.addEventListener("input", () => {
+    barraPresupuesto.value = presupuestoMin.value;
 });
 
-maxValor.addEventListener("input", () => {
-    rangoMax.value = maxValor.value;
+presupuestoMax.addEventListener("input", () => {
+    if (parseInt(presupuestoMax.value) < parseInt(presupuestoMin.value)) {
+        alert("El valor máximo no puede ser menor al mínimo.");
+        presupuestoMax.value = presupuestoMin.value;
+    }
 });
