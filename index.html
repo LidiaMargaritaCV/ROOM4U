@@ -49,12 +49,17 @@
                     <button>Departamento</button>
                 </div>
             </div>
-            <div class="filtro-seccion">
-                <p>¿Cuál es tu presupuesto?</p>
-                <input type="range" id="barraPresupuesto" min="0" max="100000" step="500" value="0">
-                <div class="presupuesto">
-                    <input type="number" id="presupuestoMin" placeholder="Mínimo" min="0" max="100000">
-                    <input type="number" id="presupuestoMax" placeholder="Máximo" min="0" max="100000">
+            <div class="filtro">
+                <label>¿Cuál es tu presupuesto?</label>
+                <div class="rango">
+                    <input type="range" id="rangoMin" min="0" max="100000" value="0" step="500">
+                    <input type="range" id="rangoMax" min="0" max="100000" value="50000" step="500">
+                </div>
+                <div class="rango-valores">
+                    <label for="minValor">Mínimo</label>
+                    <input type="number" id="minValor" value="0" min="0" max="100000" step="500">
+                    <label for="maxValor">Máximo</label>
+                    <input type="number" id="maxValor" value="50000" min="0" max="100000" step="500">
                 </div>
             </div>
             <div class="filtro-seccion">

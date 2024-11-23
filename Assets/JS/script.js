@@ -25,17 +25,49 @@ botonesDelegaciones.forEach(button => {
 });
 
 // Sincronizar valores de la barra y los campos
-barraPresupuesto.addEventListener("input", () => {
-    presupuestoMin.value = barraPresupuesto.value;
-});
+const rangoMin = document.getElementById("rangoMin");
+const rangoMax = document.getElementById("rangoMax");
+const minValor = document.getElementById("minValor");
+const maxValor = document.getElementById("maxValor");
 
-presupuestoMin.addEventListener("input", () => {
-    barraPresupuesto.value = presupuestoMin.value;
-});
+// Actualizar valores de los inputs al mover los sliders
+rangoMin.addEventListener("input", () => {
+    const minValue = parseInt(rangoMin.value);
+    const maxValue = parseInt(rangoMax.value);
 
-presupuestoMax.addEventListener("input", () => {
-    if (parseInt(presupuestoMax.value) < parseInt(presupuestoMin.value)) {
-        alert("El valor máximo no puede ser menor al mínimo.");
-        presupuestoMax.value = presupuestoMin.value;
+    if (minValue >= maxValue) {
+        rangoMin.value = maxValue - 500; // Evitar que los valores se crucen
     }
+    minValor.value = rangoMin.value;
+});
+
+rangoMax.addEventListener("input", () => {
+    const minValue = parseInt(rangoMin.value);
+    const maxValue = parseInt(rangoMax.value);
+
+    if (maxValue <= minValue) {
+        rangoMax.value = minValue + 500; // Evitar que los valores se crucen
+    }
+    maxValor.value = rangoMax.value;
+});
+
+// Actualizar sliders al escribir en los inputs
+minValor.addEventListener("input", () => {
+    const minValue = parseInt(minValor.value);
+    const maxValue = parseInt(maxValor.value);
+
+    if (minValue >= maxValue) {
+        minValor.value = maxValue - 500;
+    }
+    rangoMin.value = minValor.value;
+});
+
+maxValor.addEventListener("input", () => {
+    const minValue = parseInt(minValor.value);
+    const maxValue = parseInt(maxValor.value);
+
+    if (maxValue <= minValue) {
+        maxValor.value = minValue + 500;
+    }
+    rangoMax.value = maxValor.value;
 });
