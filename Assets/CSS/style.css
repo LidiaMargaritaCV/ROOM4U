@@ -24,10 +24,10 @@ header {
 }
 /* Logo de la página */
 .logo {
-    height: 325px; /* Tamaño ajustado del logo */
+    height: 329px; /* Tamaño ajustado del logo */
     object-fit: contain; /* Mantiene las proporciones de la imagen  */
     margin-top: 18px; /* Mover hacia abajo  */
-    margin-left: -30px; /* Mover hacia la derecha  */
+    margin-left: -60px; /* Mover hacia la derecha  */
 }
 
 /* icono del Menú hamburguesa */
