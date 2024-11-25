@@ -119,7 +119,7 @@ header {
 .ventana-flotante {
     display: none;   /* Oculta la ventana*/
     position: absolute;  /*POSICIÓN RELATIVA DE LA BARRA*/
-    top: 201px;  /*POSICIÓN DE LA BARRA*/
+    top: 202px;  /*POSICIÓN DE LA BARRA*/
     left: 50%;
     transform: translateX(-50%);  /*CENTRADO HORIZONTAL*/
     background-color: #eee4da; /* Fondo beige */
