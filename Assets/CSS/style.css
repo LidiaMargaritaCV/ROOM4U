@@ -24,7 +24,7 @@ header {
 }
 /* Logo de la página */
 .logo {
-    height: 121px; /* Tamaño ajustado del logo */
+    height: 128px; /* Tamaño ajustado del logo */
     object-fit: contain; /* Mantiene las proporciones de la imagen  */
     margin-top: 20px; /* Mover hacia abajo  */
     margin-right: 26px; /* Mover hacia la derecha  */
