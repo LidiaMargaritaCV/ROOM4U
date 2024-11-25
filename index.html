@@ -1,30 +1,37 @@
+<!----------------------------------PÁGINA PRINCIPAL------------------------------------------->
+<!--LIBRERÍAS-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--AQUÍ EMPIEZA LO PRIMERO QUE VAMOS A HACER QUE EN ESTE CASO ES LA PÁGINA PRINCIPAL-->
+<!--REQUISITO 9 "FILTRADO DE BÚSQUEDA"-->
     <title>Room4U - Filtrado de Búsqueda</title>
-    <!-- Fuente personalizada -->
+    <!-- Fuente personalizada para la letra bonita -->
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
-    <!-- Vincular CSS -->
+    <!-- Vincular CSS para que se conecte con las páginas de estilo y diseño  -->
+         <!-- Vincular CSS para que se conecte a la página principal -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
+             <!-- Vincular CSS para que se conecte al menú desplegable -->
     <link rel="stylesheet" href="Assets/CSS/menudesplegable/styles.css">
 </head>
 <body>
-    <!-- Cabecera -->
+    <!-- Cabecera-->
     <header>
-        <!-- Logo Room4U -->
+        <!-- Logo Room4U, si le das clic te lleva al inicio-->
         <a href="./index.html">
             <img src="Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
         </a>
         <!-- Menú hamburguesa -->
         <div class="menu-hamburguesa" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span> <!--Primera línea del menú-->
+            <span></span> <!--Segunda línea del menú-->
+            <span></span> <!--Tercera línea del menú-->
         </div>
         <!-- Menú desplegable -->
         <ul class="menu-desplegable" id="menu">
+        <!-- Si el usuario hace clic, va a la página deseada -->
             <li><a href="./inicio-sesion/index.html">Iniciar sesión</a></li>
             <li><a href="./publicar/index.html">Publicar</a></li>
             <li><a href="./favoritos/index.html">Favoritos</a></li>
@@ -34,27 +41,30 @@
     <!-- Barra de búsqueda -->
     <main>
         <div id="barraBusqueda" class="barra-busqueda">
-            Búsqueda de inmueble
-            <img src="Assets/IMG/lupa.png" alt="Buscar">
+            Buscar inmueble  <!-- Lo que dice la barra de búsqueda -->
+            <img src="Assets/IMG/lupa.png" alt="Buscar">  <!-- Imagen de la lupa-->
         </div>
 
-        <!-- Ventana flotante -->
+        <!-- Ventana flotante para el formulario -->
         <div id="ventanaFlotante" class="ventana-flotante oculto">
-            <h2>Buscar inmueble</h2>
-            <div class="filtro-seccion">
+
+        <!-- Primera pregunta del formulario -->
+        <div class="filtro-seccion">
                 <p>¿Qué estás buscando?</p>
                 <div class="opciones">
+        <!-- Botones para que elija su opción deseada-->
                     <button>Casa</button>
                     <button>Cuarto</button>
                     <button>Departamento</button>
                 </div>
             </div>
+        <!-- Segunda pregunta del formulario -->
             <div class="filtro">
                 <label>¿Cuál es tu presupuesto?</label>
                 <div class="rango">
-                    <input type="range" id="rangoMin" min="0" max="100000" value="0" step="500">
-                    <input type="range" id="rangoMax" min="0" max="100000" value="50000" step="500">
-                </div>
+        <!-- Barra deslizante del precio -->
+                    <input type="range" id="rangoPrecio" min="0" max="100000" step="500">
+            </div>
                 <div class="rango-valores">
                     <label for="minValor">Mínimo</label>
                     <input type="number" id="minValor" value="0" min="0" max="100000" step="500">
@@ -62,8 +72,10 @@
                     <input type="number" id="maxValor" value="50000" min="0" max="100000" step="500">
                 </div>
             </div>
+        <!-- Tercera pregunta del formulario -->
             <div class="filtro-seccion">
                 <p>Selecciona las delegaciones donde quieres rentar</p>
+        <!-- Cada botón es una delegación que el usuario puede elegir -->
                 <div class="delegaciones">
                     <button>Álvaro Obregón</button>
                     <button>Benito Juárez</button>
@@ -83,11 +95,12 @@
                     <button>Iztacalco</button>
                 </div>
             </div>
+<!-- Botón de busqueda del inmueble luego de llenar el formulario -->
             <button class="boton-accion">Buscar inmueble</button>
         </div>
     </main>
 
-    <!-- Vincular JS -->
+    <!-- Vincular JS para que haya funciones y sea interactivo en la página -->
     <script src="Assets/JS/script.js" defer></script>
     <script src="Assets/JS/menu/menu.js" defer></script>
 </body>

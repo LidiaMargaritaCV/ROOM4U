@@ -1,66 +1,70 @@
+/*-----------------------------ESTILO DE LA PÁGINA PRINCIPAL--------------------------------------*/
 /* General Reset */
 * {
+    /* Siempre van esos 3 para eliminar el margen y el relleno */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* ESTILO DEL CUERPO DE PÁGINA */
 body {
-    font-family: 'ADLaM Display', sans-serif;
-    background-color: #f9f9f9; /* Fondo general */
+    font-family: 'ADLaM Display', sans-serif; /* Tipo de letra */
+    background-color: #f9f9f9; /* Color del fondo de la página */
 }
 
 /* Cabecera */
 header {
-    background-color: #FBD733; /* Amarillo brillante */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    height: 70px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #FBD733; /* Color de la cabecera */
+    display: flex; /* Siempre va para organizar */
+    justify-content: space-between; /* Espacio entre el logo y el menú*/
+    align-items: center; /* Alinear verticalmente  */
+    padding: 10px 20px; /* Espacio interno  */
+    height: 70px;  /* Altura de la cabecera  */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra */
 }
-
+/* Logo de la página */
 .logo {
     height: 180px; /* Tamaño ajustado del logo */
-    object-fit: contain;
+    object-fit: contain; /* Mantiene las proporciones de la imagen  */
+    margin-top: 20px; /* Mover hacia abajo  */
+    margin-left: -10px; /* Mover hacia la izquierda  */
 }
 
-/* Menú hamburguesa */
+/* icono del Menú hamburguesa */
 .menu-hamburguesa {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+    display: flex;          /* Siempre va para organizar */
+    flex-direction: column; /* Apilarlas líneas verticalmente  */
+    gap: 5px;  /* Espacio entre las líneas*/
+    cursor: pointer; /* Cambiar el cursor al pasar*/
 }
 
 .menu-hamburguesa span {
-    background-color: #000;
-    height: 3px;
-    width: 25px;
-    border-radius: 2px;
+    background-color: #000; /* Color de las líneas*/
+    height: 5px; /* Altura de cada línea*/
+    width: 25px; /* Longitud de las líneas*/
+    border-radius: 2px;  /* Bordes redondeados*/
 }
 
 /* Barra de búsqueda */
 .barra-busqueda {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    color: #333;
-    border: 2px solid #161616;
-    border-radius: 25px;
-    padding: 10px 20px;
-    width: 600px;
-    height: 50px;
-    margin: 70px auto;
-    cursor: pointer;
-    position: relative;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Siempre va para organizar */
+    align-items: center;  /*Centra verticalmente el contenido*/
+    justify-content: space-between;  /* Espacio entre texto e imagen*/
+    background-color: #fff;   /* Color del fondo de la barra */
+    color: #333;   /* Color del texto de la barra */
+    border: 2px solid #161616;  /* Color del margen de la barra */
+    border-radius: 25px;   /* Bordes redondeados*/
+    padding: 10px 20px;   /* Espacio interno  */
+    width: 700px;    /* Ancho de la barra*/
+    height: 60px;    /* Altura de la barra  */
+    margin: 70px auto; /* Centra la barra y añade mergen*/
+    cursor: pointer;    /* Cambiar el cursor al pasar*/
+    position: relative;   /*Es para posicionar la lupa*/
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);   /* Sombra */
 }
-.barra-busqueda img {
+.barra-busqueda img {   /* Imagen de la barra de búsqueda */
     position: absolute; /* Relativo a la barra */
-    right: 15px; /* Fijar al extremo derecho */
+    right: 15px; /* Fijar a la derecha */
     top: 50%; /* Centrar verticalmente dentro de la barra */
     transform: translateY(-50%); /* Ajustar para centrar exactamente */
     width: 20px; /* Cambia aquí el tamaño de la lupa */
@@ -68,56 +72,62 @@ header {
     pointer-events: none; /* Para que no interfiera al hacer clic */
 }
 
+/* Efecto al pasar el mouse por la barra*/
 .barra-busqueda:hover {
     background-color: #eee;
 }
+/* Rango de la barra deslizante */
 .rango {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    display: flex;  /* Siempre va para organizar */
+    justify-content: space-between; /* Espacio entre los botones*/
+    align-items: center; /* Alinear verticalmente  */
+    margin-bottom: 10px; /* Espacio interior*/
+}
+ /*Rango de la barra*/
+ .rango input[type="range"] {
+    appearance: none;  /*PROPIEDAD*/
+    -webkit-appearance: none;
+    width: 100%;  /* Ancho COMPLETO de la barra deslizante*/
+    height: 8px;  /* Altura de la barra deslizante */
+    border-radius: 5px;  /* Bordes redondeados*/
+    background: linear-gradient(to right, #66bb2f 0%, #66bb2f 50%, #ddd 50%, #ddd 100%);
+    outline: none;  /* Sin Borde al hacer clic*/
+    cursor: pointer;   /* Cambiar el cursor al pasar*/
+    transition: background 0.3s ease;   /* Suaviza el color*/
 }
 
-.rango input[type="range"] {
-    width: 45%;
-    appearance: none;
-    background-color: #FFD700;
-    height: 4px;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
+.rango input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;  /* Ancho del botón deslizante*/
+    height: 16px;  /* Alto del botón deslizante*/
+    background: #00f7ff;  /* Color del botón deslizante*/
+    border-radius: 50%;  /* Botón redondo*/
+    cursor: pointer;  /* Cambiar el cursor al pasar*/
 }
 
-.rango-valores {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.rango-valores input {
-    width: 100px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
+.rango input[type="range"]::-moz-range-thumb {
+    width: 16px; /* Ancho del botón deslizante*/
+    height: 16px; /* Alto del botón deslizante*/
+    background: #00f7ff;  /* Color del botón deslizante*/
+    border-radius: 50%;   /* Botón redondo*/
+    cursor: pointer;   /* Cambiar el cursor al pasar*/
 }
 
 /* Ventana flotante */
 .ventana-flotante {
-    display: none;
+    display: none;   /* Oculta la ventana*/
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fdfdec; /* Fondo beige */
+    background-color: #eee4da; /* Fondo beige */
     border-radius: 20px;
     padding: 20px;
     width: 80%;
     max-width: 600px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25); /* Sombra visible */
-    z-index: 1000;
-    border: 2px solid #2bdaae; /* Marco amarillo suave */
+    z-index: 1000;   /* Encima de otros elementos*/
+    border: 2px solid #a6a6a6; /* Borde gris */
 }
 
 .ventana-flotante h2 {
@@ -125,35 +135,38 @@ header {
     margin-bottom: 20px;
 }
 
-.filtro-seccion {
-    margin-bottom: 20px;
-}
-
+/* Botones del filtro*/
 .opciones button, .delegaciones button {
-    background-color: #fff;
-    color: #130b0b;
-    padding: 10px;
-    border: 3px solid #ccc;
+    background-color: #fff;  /* Fondo de los botones */
+    color: #130b0b;  /* Color del texto */
+    padding: 10px; /* Espacio interno*/
+    border: 3px solid #a6a6a6;  /* Borde del botón*/
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .opciones button:hover, .delegaciones button:hover, .opciones button.active, .delegaciones button.active {
-    background-color: #00b7ff;
-    color: #fff;
+    background-color: #66bb2f; /* Fondo al tocar el botón*/
+    color: #0a0a0a; /* Color del texto */
 }
 
 /* Botón de acción */
 .boton-accion {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #FFD700;
-    color: #0e0a0a;
+    display: inline-block; /* Cambiado a inline-block para ajustar tamaño y posición */
+    width: auto; /* Ajustar automáticamente el ancho según el contenido */
+    padding: 10px 20px; /* Espaciado interno reducido */
+    background-color: #ebbe00; /* Color de fondo */
+    color: #0e0a0a; /* Color del texto */
     text-align: center;
     border: none;
-    border-radius: 25px;
+    border-radius: 25px; /* Bordes redondeados */
     cursor: pointer;
-    margin-top: 20px;
+    position: absolute; /* Posicionamiento absoluto dentro de la ventana flotante */
+    bottom: 20px; /* Separación desde la parte inferior */
+    right: 20px; /* Separación desde la derecha */
+    font-size: 14px; /* Tamaño del texto más pequeño */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra al botón */
+    transition: transform 0.2s ease; /* Animación para el efecto hover */
 }
+
