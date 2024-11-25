@@ -66,7 +66,7 @@ header {
 }
 .barra-busqueda img {   /* Imagen de la barra de búsqueda */
     position: absolute; /* Relativo a la barra */
-    right: 18px; /* Fijar a la derecha */
+    right: 20px; /* Fijar a la derecha */
     top: 50%; /* Centrar verticalmente dentro de la barra */
     transform: translateY(-50%); /* Ajustar para centrar exactamente */
     width: 24px; /* Cambia aquí el tamaño de la lupa */
