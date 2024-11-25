@@ -52,7 +52,7 @@ header {
     justify-content: space-between;  /* Espacio entre texto e imagen*/
     background-color: #fff;   /* Color del fondo de la barra */
     color: #333;   /* Color del texto de la barra */
-    font-size: 18px;
+    font-size: 20px;  /*Letra de la barra*/
     border: 2px solid #161616;  /* Color del margen de la barra */
     border-radius: 25px;   /* Bordes redondeados*/
     padding: 10px 20px;   /* Espacio interno  */
@@ -68,8 +68,8 @@ header {
     right: 15px; /* Fijar a la derecha */
     top: 50%; /* Centrar verticalmente dentro de la barra */
     transform: translateY(-50%); /* Ajustar para centrar exactamente */
-    width: 22px; /* Cambia aquí el tamaño de la lupa */
-    height: 22px; /* Cambia aquí el tamaño de la lupa */
+    width: 23px; /* Cambia aquí el tamaño de la lupa */
+    height: 23px; /* Cambia aquí el tamaño de la lupa */
     pointer-events: none; /* Para que no interfiera al hacer clic */
 }
 
