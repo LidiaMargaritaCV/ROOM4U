@@ -14,7 +14,7 @@ body {
 
 /* Cabecera */
 header {
-    background-color: #ffd41f; /* Color de la cabecera */
+    background-color: #EEED4E; /* Color de la cabecera */
     display: flex; /* Siempre va para organizar */
     justify-content: space-between; /* Espacio entre el logo y el menú*/
     align-items: center; /* Alinear verticalmente  */
