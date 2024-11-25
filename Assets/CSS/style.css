@@ -41,7 +41,7 @@ header {
 .menu-hamburguesa span {
     background-color: #000; /* Color de las líneas*/
     height: 5px; /* Altura de cada línea*/
-    width: 25px; /* Longitud de las líneas*/
+    width: 20px; /* Longitud de las líneas*/
     border-radius: 2px;  /* Bordes redondeados*/
 }
 
@@ -52,6 +52,7 @@ header {
     justify-content: space-between;  /* Espacio entre texto e imagen*/
     background-color: #fff;   /* Color del fondo de la barra */
     color: #333;   /* Color del texto de la barra */
+    font-size: 18px;
     border: 2px solid #161616;  /* Color del margen de la barra */
     border-radius: 25px;   /* Bordes redondeados*/
     padding: 10px 20px;   /* Espacio interno  */
@@ -67,8 +68,8 @@ header {
     right: 15px; /* Fijar a la derecha */
     top: 50%; /* Centrar verticalmente dentro de la barra */
     transform: translateY(-50%); /* Ajustar para centrar exactamente */
-    width: 20px; /* Cambia aquí el tamaño de la lupa */
-    height: 20px; /* Cambia aquí el tamaño de la lupa */
+    width: 22px; /* Cambia aquí el tamaño de la lupa */
+    height: 22px; /* Cambia aquí el tamaño de la lupa */
     pointer-events: none; /* Para que no interfiera al hacer clic */
 }
 
@@ -90,7 +91,7 @@ header {
     width: 100%;  /* Ancho COMPLETO de la barra deslizante*/
     height: 8px;  /* Altura de la barra deslizante */
     border-radius: 5px;  /* Bordes redondeados*/
-    background: linear-gradient(to right, #66bb2f 0%, #66bb2f 50%, #ddd 50%, #ddd 100%);
+    background: linear-gradient(to right, #66bb2f 0%, #66bb2f 50%, #66bb2f 50%, #66bb2f 100%);
     outline: none;  /* Sin Borde al hacer clic*/
     cursor: pointer;   /* Cambiar el cursor al pasar*/
     transition: background 0.3s ease;   /* Suaviza el color*/
