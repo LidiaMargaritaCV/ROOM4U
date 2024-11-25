@@ -41,8 +41,8 @@ header {
 
 .menu-hamburguesa span {
     background-color: #000; /* Color de las líneas*/
-    height: 5px; /* Altura de cada línea*/
-    width: 26px; /* Longitud de las líneas*/
+    height: 3px; /* Altura de cada línea*/
+    width: 25px; /* Longitud de las líneas*/
     border-radius: 2px;  /* Bordes redondeados*/
 }
 
