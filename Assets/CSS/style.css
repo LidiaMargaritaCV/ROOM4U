@@ -14,7 +14,7 @@ body {
 
 /* Cabecera */
 header {
-    background-color: #FFFD41; /* Color de la cabecera */
+    background-color: #f5d10d; /* Color de la cabecera */
     display: flex; /* Siempre va para organizar */
     justify-content: space-between; /* Espacio entre el logo y el menú*/
     align-items: center; /* Alinear verticalmente  */
@@ -24,10 +24,10 @@ header {
 }
 /* Logo de la página */
 .logo {
-    height: 150px; /* Tamaño ajustado del logo */
+    height: 100px; /* Tamaño ajustado del logo */
     object-fit: contain; /* Mantiene las proporciones de la imagen  */
-    margin-top: 25px; /* Mover hacia abajo  */
-    margin-left: -49px; /* Mover hacia la izquierda  */
+    margin-top: 20px; /* Mover hacia abajo  */
+    margin-left: -30px; /* Mover hacia la izquierda  */
 }
 
 /* icono del Menú hamburguesa */
