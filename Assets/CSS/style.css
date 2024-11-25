@@ -27,7 +27,7 @@ header {
     height: 180px; /* Tamaño ajustado del logo */
     object-fit: contain; /* Mantiene las proporciones de la imagen  */
     margin-top: 25px; /* Mover hacia abajo  */
-    margin-left: -38px; /* Mover hacia la izquierda  */
+    margin-left: -41px; /* Mover hacia la izquierda  */
 }
 
 /* icono del Menú hamburguesa */
