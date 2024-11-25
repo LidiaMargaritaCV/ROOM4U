@@ -51,7 +51,7 @@ header {
     display: flex; /* Siempre va para organizar */
     align-items: center;  /*Centra verticalmente el contenido*/
     justify-content: space-between;  /* Espacio entre texto e imagen*/
-    background-color: #fff;   /* Color del fondo de la barra */
+    background-color: #ffffffdc;   /* Color del fondo de la barra */
     color: #0c0b0b;   /* Color del texto de la barra */
     font-size: 23px;  /*TAMAÑO DE LA Letra de la barra*/
     border: 2px solid #161616;  /* Color del margen de la barra */
