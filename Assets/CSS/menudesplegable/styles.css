@@ -30,14 +30,14 @@
 /*Estilo de cada enlace de cada opción del menú*/
 .menu-desplegable li a {
     text-decoration: none; /* Quita el subrayado */
-    color: #000000; /* Color del texto  */
+    color: #000; /* Color del texto  */
     font-size: 16px; /* Tamaño del texto */
     display: block; /* Esto hace que el texto se pueda hacer clic */
 }
 
 /*Cambia el color cuando vas pasando por una opción*/
 .menu-desplegable li a:hover {
-    background-color: #d4d4d4; /* Fondo gris claro al pasar el mouse */
+    background-color: #eeeeee; /* Fondo gris claro al pasar el mouse */
 }
 
 /* Transición para ocultar el menú pero que no sea de golpe*/
