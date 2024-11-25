@@ -36,7 +36,7 @@ header {
     flex-direction: column; /* Apilarlas líneas verticalmente  */
     gap: 5px;  /* Espacio entre las líneas*/
     cursor: pointer; /* Cambiar el cursor al pasar*/
-    margin-left: -2px; /* Mover hacia la izquierda  */
+   
 }
 
 .menu-hamburguesa span {
