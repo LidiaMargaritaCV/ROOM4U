@@ -30,7 +30,7 @@
 /*Estilo de cada enlace de cada opción del menú*/
 .menu-desplegable li a {
     text-decoration: none; /* Quita el subrayado */
-    color: #333; /* Color del texto  */
+    color: #000; /* Color del texto  */
     font-size: 16px; /* Tamaño del texto */
     display: block; /* Esto hace que el texto se pueda hacer clic */
 }
